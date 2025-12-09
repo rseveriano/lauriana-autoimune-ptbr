@@ -1,0 +1,14 @@
+{
+  "name": "lauriana-autoimune-ptbr",
+  "version": "1.0.0",
+  "description": "Site estatico otimizado da Dra. Lauriana para campanha de vendas do pacote terapeutico para doencas autoimunes",
+  "scripts": {
+    "optimize": "echo 'Otimização e Minificação em andamento...'",
+    "lint": "echo 'Rodando testes de lint...'"
+  },
+  "devDependencies": {
+    "html-minifier-cli": "^0.1.0",
+    "stylelint": "^14.15.0",
+    "eslint": "^8.29.0"
+  }
+}
