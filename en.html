@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dra. Lauriana | Protocolo Autoimunidade em Equilíbrio</title>
+    <title>Dr. Lauriana | Autoimmunity in Balance Protocol</title>
     <meta name="description"
-        content="Protocolo de 120 dias para silenciar a inflamação autoimune e recuperar sua vitalidade com Dra. Lauriana de Magalhães Silva.">
+        content="120-day protocol to silence autoimmune inflammation and regain your vitaly with Dr. Lauriana de Magalhães Silva.">
 
-    <!-- Tailwind CSS (Via CDN para funcionamento imediato) -->
+    <!-- Tailwind CSS (Via CDN for immediate use) -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Fontes Google -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Ícones (Phosphor Icons) -->
+    <!-- Icons (Phosphor Icons) -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <script>
@@ -27,12 +27,12 @@
                 extend: {
                     colors: {
                         brand: {
-                            light: '#F8FAF9', // Sage/Off-white suave
-                            green: '#3B755F', // Verde terapeuta/calmante
-                            dark: '#1F2937',  // Texto escuro
-                            gold: '#C5A065',  // Dourado mais suave/sofisticado
-                            accent: '#E07A5F', // Terracota acolhedor
-                            sage: '#A7F3D0'   // Verde sálvia muito claro
+                            light: '#F8FAF9', // Soft Sage/Off-white
+                            green: '#3B755F', // Therapeutic Green
+                            dark: '#1F2937',  // Dark Text
+                            gold: '#C5A065',  // Soft Gold
+                            accent: '#E07A5F', // Terracotta
+                            sage: '#A7F3D0'   // Light Sage
                         }
                     },
                     fontFamily: {
@@ -48,7 +48,7 @@
     </script>
 
     <style>
-        /* Efeito de scroll suave */
+        /* Smooth Scroll */
         html {
             scroll-behavior: smooth;
         }
@@ -87,20 +87,6 @@
             pointer-events: auto;
         }
     </style>
-    <script>
-        // Soft Language Detection & Redirect
-        // Only redirects on the very first visit to avoid overriding user choice
-        if (!localStorage.getItem('language_redirected')) {
-            localStorage.setItem('language_redirected', 'true');
-            const userLang = navigator.language || navigator.userLanguage;
-
-            if (userLang.startsWith('en')) {
-                window.location.replace('en.html');
-            } else if (userLang.startsWith('es')) {
-                window.location.replace('es.html');
-            }
-        }
-    </script>
 </head>
 
 <body class="font-sans text-brand-dark bg-brand-light antialiased">
@@ -111,29 +97,29 @@
             <div class="flex justify-between items-center">
                 <!-- Logo -->
                 <div class="text-2xl font-serif font-bold text-brand-green tracking-wide">
-                    Dra. Lauriana<span class="text-sm block font-sans font-normal text-gray-500">Nutrição &
-                        Autoimunidade</span>
+                    Dr. Lauriana<span class="text-sm block font-sans font-normal text-gray-500">Nutrition &
+                        Autoimmunity</span>
                 </div>
 
                 <!-- Desktop Nav -->
                 <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#metodo" class="text-gray-600 hover:text-brand-green transition font-medium">O Método</a>
-                    <a href="#protocolo" class="text-gray-600 hover:text-brand-green transition font-medium">O
-                        Protocolo</a>
-                    <a href="#sobre" class="text-gray-600 hover:text-brand-green transition font-medium">Sobre Mim</a>
+                    <a href="#metodo" class="text-gray-600 hover:text-brand-green transition font-medium">The Method</a>
+                    <a href="#protocolo" class="text-gray-600 hover:text-brand-green transition font-medium">The
+                        Protocol</a>
+                    <a href="#sobre" class="text-gray-600 hover:text-brand-green transition font-medium">About Me</a>
 
                     <!-- Language Selector -->
                     <div class="flex items-center space-x-2 border-l pl-4 border-gray-300 ml-4">
-                        <a href="index.html" class="text-brand-green font-bold">PT</a>
+                        <a href="index.html" class="text-gray-400 hover:text-brand-green transition text-sm">PT</a>
                         <span class="text-gray-300">|</span>
-                        <a href="en.html" class="text-gray-400 hover:text-brand-green transition text-sm">EN</a>
+                        <a href="en.html" class="text-brand-green font-bold">EN</a>
                         <span class="text-gray-300">|</span>
                         <a href="es.html" class="text-gray-400 hover:text-brand-green transition text-sm">ES</a>
                     </div>
 
                     <a href="#oferta"
                         class="bg-brand-green text-white px-6 py-2 rounded-full font-bold hover:bg-green-800 transition shadow-lg transform hover:scale-105 text-sm">
-                        Agendar Avaliação
+                        Schedule Assessment
                     </a>
                 </nav>
 
@@ -147,27 +133,27 @@
             <div id="mobile-menu"
                 class="md:hidden absolute top-full left-6 right-6 bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 space-y-4 transform scale-95 origin-top transition-all duration-300">
                 <a href="#metodo"
-                    class="block text-gray-600 hover:text-brand-green font-semibold py-3 border-b border-gray-50">O
-                    Método</a>
+                    class="block text-gray-600 hover:text-brand-green font-semibold py-3 border-b border-gray-50">The
+                    Method</a>
                 <a href="#protocolo"
-                    class="block text-gray-600 hover:text-brand-green font-semibold py-3 border-b border-gray-50">O
-                    Protocolo</a>
+                    class="block text-gray-600 hover:text-brand-green font-semibold py-3 border-b border-gray-50">The
+                    Protocol</a>
                 <a href="#sobre"
-                    class="block text-gray-600 hover:text-brand-green font-semibold py-3 border-b border-gray-50">Sobre
-                    Mim</a>
+                    class="block text-gray-600 hover:text-brand-green font-semibold py-3 border-b border-gray-50">About
+                    Me</a>
 
                 <div class="flex items-center justify-between py-2">
-                    <span class="text-gray-500 text-sm font-medium">Idioma:</span>
+                    <span class="text-gray-500 text-sm font-medium">Language:</span>
                     <div class="flex items-center gap-4">
-                        <a href="index.html" class="text-brand-green font-bold">PT</a>
-                        <a href="en.html" class="text-gray-400 hover:text-brand-green transition">EN</a>
+                        <a href="index.html" class="text-gray-400 hover:text-brand-green transition">PT</a>
+                        <a href="en.html" class="text-brand-green font-bold">EN</a>
                         <a href="es.html" class="text-gray-400 hover:text-brand-green transition">ES</a>
                     </div>
                 </div>
 
                 <a href="#oferta"
                     class="block w-full text-center bg-brand-green text-white px-6 py-4 rounded-xl font-bold hover:bg-green-800 transition shadow-lg">
-                    Agendar Avaliação
+                    Schedule Assessment
                 </a>
             </div>
         </div>
@@ -192,40 +178,39 @@
     <!-- HERO SECTION -->
     <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div class="container mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <!-- Texto -->
+            <!-- Text -->
             <div class="space-y-6">
                 <span
-                    class="inline-block bg-green-100 text-brand-green px-4 py-1 rounded-full text-sm font-bold tracking-wide uppercase">Protocolo
-                    Exclusivo</span>
+                    class="inline-block bg-green-100 text-brand-green px-4 py-1 rounded-full text-sm font-bold tracking-wide uppercase">Exclusive
+                    Protocol</span>
                 <h1 class="text-4xl lg:text-6xl font-serif font-bold leading-tight text-gray-900">
-                    Pare de lutar contra o <span class="text-brand-green italic">seu corpo</span>.
+                    Stop fighting against <span class="text-brand-green italic">your body</span>.
                 </h1>
                 <p class="text-xl text-gray-600 leading-relaxed">
-                    Um protocolo de <strong>120 dias</strong> para silenciar a inflamação e recuperar sua vitalidade.
-                    Não tratamos apenas o sintoma, tratamos o terreno biológico.
+                    A <strong>120-day</strong> protocol to silence inflammation and recover your vitality.
+                    We don't just treat the symptom, we treat the biological terrain.
                 </p>
                 <div class="pt-4 flex flex-col sm:flex-row gap-4">
                     <a href="#oferta"
                         class="bg-brand-accent text-white text-center px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-700 transition shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
-                        QUERO RECUPERAR MINHA SAÚDE
+                        I WANT TO RECOVER MY HEALTH
                     </a>
                     <p class="text-sm text-gray-500 mt-2 sm:mt-0 flex items-center justify-center sm:justify-start">
-                        <i class="ph ph-check-circle text-brand-green mr-2 text-xl"></i> Vagas Limitadas
+                        <i class="ph ph-check-circle text-brand-green mr-2 text-xl"></i> Limited Spots
                     </p>
                 </div>
             </div>
 
-            <!-- Imagem Hero -->
+            <!-- Hero Image -->
             <div class="relative">
-                <!-- Imagem Hero Otimizada -->
-                <img src="mulher.webp" alt="Mulher com saúde e vitalidade após tratamento autoimune"
+                <img src="mulher.webp" alt="Woman with health and vitality after autoimmune treatment"
                     class="w-full h-[400px] lg:h-[500px] object-cover rounded-4xl shadow-2xl" loading="eager"
                     width="800" height="600">
 
-                <!-- Elemento decorativo -->
+                <!-- Decoration -->
                 <div
                     class="absolute bottom-0 left-0 md:-bottom-6 md:-left-6 bg-white p-4 rounded-lg shadow-lg max-w-xs block border-l-4 border-brand-green">
-                    <p class="font-bold text-gray-800">"O diagnóstico não é uma sentença."</p>
+                    <p class="font-bold text-gray-800">"The diagnosis is not a sentence."</p>
                     <div class="flex text-brand-gold mt-1">
                         <i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i
                             class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i>
@@ -237,21 +222,21 @@
         <!-- Background Shape -->
         <div class="absolute top-0 right-0 -z-10 opacity-10">
             <svg width="600" height="600" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#2F855A"
+                <path fill="#3B755F"
                     d="M44.7,-76.4C58.9,-69.2,71.8,-59.1,81.6,-46.6C91.4,-34.1,98.1,-19.2,95.8,-5.3C93.5,8.6,82.2,21.5,71.1,32.4C60,43.3,49.1,52.2,37.4,59.7C25.7,67.2,13.2,73.3,-0.3,73.8C-13.8,74.3,-26.6,69.2,-38.7,61.6C-50.8,54,-62.2,43.9,-70.5,31.5C-78.8,19.1,-84,4.4,-81.7,-9.1C-79.4,-22.6,-69.6,-34.9,-58.2,-44.3C-46.8,-53.7,-33.8,-60.2,-20.9,-68.1C-8,-76,-1.5,-85.3,44.7,-76.4Z"
                     transform="translate(100 100)" />
             </svg>
         </div>
     </section>
 
-    <!-- A DOR (Pain Points) -->
+    <!-- PAIN POINTS -->
     <section class="bg-gray-50 py-20">
         <div class="container mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-4">Você sente que, por mais que
-                    tente, os sintomas sempre voltam?</h2>
-                <p class="text-gray-600 text-lg">A medicação sozinha muitas vezes não é suficiente se o "terreno"
-                    continuar inflamado.</p>
+                <h2 class="text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-4">Do you feel that no matter how
+                    hard you try, symptoms always come back?</h2>
+                <p class="text-gray-600 text-lg">Medication alone is often not enough if the "terrain" remains inflamed.
+                </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -261,8 +246,8 @@
                         class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
                         <i class="ph ph-battery-warning"></i>
                     </div>
-                    <h3 class="font-bold text-xl mb-2">Cansaço Crônico</h3>
-                    <p class="text-gray-500 text-sm">Aquela exaustão que não passa mesmo depois de uma noite de sono.
+                    <h3 class="font-bold text-xl mb-2">Chronic Fatigue</h3>
+                    <p class="text-gray-500 text-sm">That exhaustion that doesn't go away even after a night of sleep.
                     </p>
                 </div>
 
@@ -272,8 +257,8 @@
                         class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
                         <i class="ph ph-fire"></i>
                     </div>
-                    <h3 class="font-bold text-xl mb-2">Inflamação Constante</h3>
-                    <p class="text-gray-500 text-sm">Dores articulares, inchaço e desconfortos digestivos diários.</p>
+                    <h3 class="font-bold text-xl mb-2">Constant Inflammation</h3>
+                    <p class="text-gray-500 text-sm">Joint pain, swelling, and daily digestive discomfort.</p>
                 </div>
 
                 <!-- Card 3 -->
@@ -282,8 +267,9 @@
                         class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
                         <i class="ph ph-question"></i>
                     </div>
-                    <h3 class="font-bold text-xl mb-2">Insegurança Alimentar</h3>
-                    <p class="text-gray-500 text-sm">O medo de comer e passar mal, sem saber o que é gatilho.</p>
+                    <h3 class="font-bold text-xl mb-2">Food Insecurity</h3>
+                    <p class="text-gray-500 text-sm">The fear of eating and feeling sick, not knowing what the trigger
+                        is.</p>
                 </div>
 
                 <!-- Card 4 -->
@@ -292,62 +278,63 @@
                         class="w-16 h-16 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
                         <i class="ph ph-heart-break"></i>
                     </div>
-                    <h3 class="font-bold text-xl mb-2">Solidão no Tratamento</h3>
-                    <p class="text-gray-500 text-sm">Consultas rápidas demais que não ouvem sua história completa.</p>
+                    <h3 class="font-bold text-xl mb-2">Loneliness in Treatment</h3>
+                    <p class="text-gray-500 text-sm">Consultations that are too quick and don't listen to your full
+                        story.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- METODOLOGIA (Terreno Biológico) -->
+    <!-- METHODOLOGY -->
     <section id="metodo" class="py-20 bg-white">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
             <div class="w-full md:w-1/2">
-                <!-- Imagem Metodologia Otimizada -->
-                <img src="planta.webp" alt="Alimentos frescos e nutrição para renovação do terreno biológico"
+                <img src="planta.webp" alt="Fresh food and nutrition for biological terrain renewal"
                     class="w-full h-[400px] object-cover rounded-4xl shadow-xl" loading="lazy" width="600" height="400">
             </div>
             <div class="w-full md:w-1/2">
-                <h2 class="text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-6">O Segredo está no <span
-                        class="text-brand-green">Terreno Biológico</span></h2>
+                <h2 class="text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-6">The Secret is in the <span
+                        class="text-brand-green">Biological Terrain</span></h2>
                 <p class="text-gray-600 text-lg mb-6 leading-relaxed">
-                    Imagine que seu corpo é um jardim. Se o solo estiver ácido e inflamado, não adianta apenas cortar as
-                    ervas daninhas (sintomas); elas vão crescer de novo.
+                    Imagine your body is a garden. If the soil is acidic and inflamed, it's no use just cutting the
+                    weeds (symptoms); they will grow back.
                 </p>
                 <p class="text-gray-600 text-lg mb-8 leading-relaxed">
-                    Minha abordagem visa <strong>limpar e nutrir esse solo</strong>. Durante <strong>120 dias</strong>,
-                    caminharemos juntos investigando gatilhos e devolvendo ao seu corpo a capacidade de se regular.
+                    My approach aims to <strong>clean and nourish this soil</strong>. During <strong>120 days</strong>,
+                    we will walk together investigating triggers and returning to your body the ability to regulate
+                    itself.
                 </p>
                 <ul class="space-y-4">
                     <li class="flex items-start">
                         <i class="ph ph-check-circle text-brand-green text-xl mr-3 mt-1"></i>
-                        <span>Rastreio Metabólico Profundo</span>
+                        <span>Deep Metabolic Screening</span>
                     </li>
                     <li class="flex items-start">
                         <i class="ph ph-check-circle text-brand-green text-xl mr-3 mt-1"></i>
-                        <span>Identificação de Gatilhos Individuais</span>
+                        <span>Identification of Individual Triggers</span>
                     </li>
                     <li class="flex items-start">
                         <i class="ph ph-check-circle text-brand-green text-xl mr-3 mt-1"></i>
-                        <span>Estratégias Anti-inflamatórias</span>
+                        <span>Anti-inflammatory Strategies</span>
                     </li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- PROVA SOCIAL (Testimonials) -->
+    <!-- SOCIAL PROOF (Testimonials) -->
     <section class="py-20 bg-brand-light">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl lg:text-4xl font-serif font-bold text-gray-900 text-center mb-12">Histórias de <span
-                    class="text-brand-green">Recuperação</span></h2>
+            <h2 class="text-3xl lg:text-4xl font-serif font-bold text-gray-900 text-center mb-12">Stories of <span
+                    class="text-brand-green">Recovery</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Depoimento 1 -->
+                <!-- Testimonial 1 -->
                 <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition relative">
                     <i class="ph ph-quotes text-4xl text-brand-green/20 absolute top-6 left-6"></i>
-                    <p class="text-gray-600 italic mb-6 relative z-10 pt-6">"Eu achava que cansaço era 'normal' da minha
-                        idade. Em 45 dias de protocolo, voltei a ter disposição para brincar com meus netos. A Dra.
-                        Lauriana olhou o que nenhum outro médico viu."</p>
+                    <p class="text-gray-600 italic mb-6 relative z-10 pt-6">"I thought tiredness was 'normal' for my
+                        age. In 45 days of protocol, I got my energy back to play with my grandkids. Dr. Lauriana looked
+                        at what no other doctor saw."</p>
                     <div class="flex items-center gap-4">
                         <div
                             class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center font-bold text-brand-green">
@@ -358,35 +345,35 @@
                         </div>
                     </div>
                 </div>
-                <!-- Depoimento 2 -->
+                <!-- Testimonial 2 -->
                 <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition relative">
                     <i class="ph ph-quotes text-4xl text-brand-green/20 absolute top-6 left-6"></i>
-                    <p class="text-gray-600 italic mb-6 relative z-10 pt-6">"O suporte 'Direct Line' não é marketing.
-                        Ela realmente responde. Quando tive uma crise por comer algo errado, a orientação rápida me
-                        salvou de dias de dor."</p>
+                    <p class="text-gray-600 italic mb-6 relative z-10 pt-6">"The 'Direct Line' support is not marketing.
+                        She really answers. When I had a flare-up from eating something wrong, the quick guidance saved
+                        me from days of pain."</p>
                     <div class="flex items-center gap-4">
                         <div
                             class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center font-bold text-brand-green">
                             JP</div>
                         <div>
                             <p class="font-bold text-gray-900">João Paulo</p>
-                            <p class="text-xs text-gray-500">Doença de Crohn</p>
+                            <p class="text-xs text-gray-500">Crohn's Disease</p>
                         </div>
                     </div>
                 </div>
-                <!-- Depoimento 3 -->
+                <!-- Testimonial 3 -->
                 <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition relative">
                     <i class="ph ph-quotes text-4xl text-brand-green/20 absolute top-6 left-6"></i>
-                    <p class="text-gray-600 italic mb-6 relative z-10 pt-6">"Investimento que vale cada centavo. Só de
-                        não gastar mais com remédios para dor e antiácidos, o tratamento já se pagou. Minha pele e meu
-                        intestino são outros."</p>
+                    <p class="text-gray-600 italic mb-6 relative z-10 pt-6">"Investment worth every penny. Just by not
+                        spending more on pain meds and antacids, the treatment paid for itself. My skin and gut are
+                        completely different."</p>
                     <div class="flex items-center gap-4">
                         <div
                             class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center font-bold text-brand-green">
                             AC</div>
                         <div>
                             <p class="font-bold text-gray-900">Ana Clara</p>
-                            <p class="text-xs text-gray-500">Psoríase</p>
+                            <p class="text-xs text-gray-500">Psoriasis</p>
                         </div>
                     </div>
                 </div>
@@ -394,13 +381,13 @@
         </div>
     </section>
 
-    <!-- A OFERTA (Stacking Value) -->
+    <!-- THE OFFER -->
     <section id="protocolo" class="py-20 bg-brand-green text-white relative overflow-hidden">
         <div class="container mx-auto px-6 relative z-10">
             <div class="text-center mb-12">
-                <h2 class="text-3xl lg:text-4xl font-serif font-bold mb-4">O que está incluso no Protocolo?</h2>
-                <p class="text-green-100 text-lg max-w-2xl mx-auto">Diferente de consultas avulsas, entregamos um
-                    ecossistema completo de tratamento.</p>
+                <h2 class="text-3xl lg:text-4xl font-serif font-bold mb-4">What's included in the Protocol?</h2>
+                <p class="text-green-100 text-lg max-w-2xl mx-auto">Unlike single consultations, we deliver a complete
+                    treatment ecosystem.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -408,13 +395,13 @@
                 <div
                     class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-lg hover:bg-white/20 transition">
                     <div class="flex justify-between items-start mb-4">
-                        <h3 class="font-bold text-xl">01. Imersão Diagnóstica</h3>
+                        <h3 class="font-bold text-xl">01. Diagnostic Immersion</h3>
                         <i class="ph ph-magnifying-glass text-2xl text-green-200"></i>
                     </div>
-                    <p class="text-sm text-green-100 mb-4 h-12">Duas consultas de 2h cada. Análise profunda de exames e
-                        histórico.</p>
+                    <p class="text-sm text-green-100 mb-4 h-12">Two 2h consultations. Deep analysis of exams and
+                        history.</p>
                     <div class="border-t border-white/20 pt-3 text-right">
-                        <span class="block text-xs text-green-200">Valor Avulso:</span>
+                        <span class="block text-xs text-green-200">Single Value:</span>
                         <span class="font-mono text-lg decoration-wavy">R$ 1.400,00</span>
                     </div>
                 </div>
@@ -423,13 +410,13 @@
                 <div
                     class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-lg hover:bg-white/20 transition">
                     <div class="flex justify-between items-start mb-4">
-                        <h3 class="font-bold text-xl">02. Monitoramento</h3>
+                        <h3 class="font-bold text-xl">02. Monitoring</h3>
                         <i class="ph ph-chart-line-up text-2xl text-green-200"></i>
                     </div>
-                    <p class="text-sm text-green-100 mb-4 h-12">Duas consultas de seguimento (1h) para ajustes finos na
-                        rota.</p>
+                    <p class="text-sm text-green-100 mb-4 h-12">Two follow-up consultations (1h) for fine-tuning the
+                        route.</p>
                     <div class="border-t border-white/20 pt-3 text-right">
-                        <span class="block text-xs text-green-200">Valor Avulso:</span>
+                        <span class="block text-xs text-green-200">Single Value:</span>
                         <span class="font-mono text-lg">R$ 700,00</span>
                     </div>
                 </div>
@@ -439,17 +426,17 @@
                     class="bg-white text-brand-dark p-6 rounded-lg shadow-xl transform border-2 border-brand-gold relative">
                     <div
                         class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-gold text-white px-4 py-1 rounded-full text-xs font-bold tracking-wider uppercase">
-                        Bônus Exclusivo
+                        Exclusive Bonus
                     </div>
                     <div class="flex justify-between items-start mb-4">
-                        <h3 class="font-bold text-xl">03. Suporte "Direct Line"</h3>
+                        <h3 class="font-bold text-xl">03. "Direct Line" Support</h3>
                         <i class="ph ph-whatsapp-logo text-2xl text-green-600"></i>
                     </div>
-                    <p class="text-sm text-gray-600 mb-4 h-12">Acesso direto a mim por 120 dias. Dúvidas, ajustes e
-                        segurança.</p>
+                    <p class="text-sm text-gray-600 mb-4 h-12">Direct access to me for 120 days. Questions, adjustments,
+                        and safety.</p>
                     <div class="border-t border-gray-200 pt-3 text-right">
-                        <span class="block text-xs text-gray-500">De R$ 720,00 por:</span>
-                        <span class="font-bold text-2xl text-brand-green">GRÁTIS</span>
+                        <span class="block text-xs text-gray-500">From R$ 720,00 for:</span>
+                        <span class="font-bold text-2xl text-brand-green">FREE</span>
                     </div>
                 </div>
 
@@ -458,17 +445,17 @@
                     class="bg-white text-brand-dark p-6 rounded-lg shadow-xl transform border-2 border-brand-gold relative mt-6 md:mt-0">
                     <div
                         class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-gold text-white px-4 py-1 rounded-full text-xs font-bold tracking-wider uppercase">
-                        Presente
+                        Gift
                     </div>
                     <div class="flex justify-between items-start mb-4">
-                        <h3 class="font-bold text-xl">04. Terapias Integrativas</h3>
+                        <h3 class="font-bold text-xl">04. Integrative Therapies</h3>
                         <i class="ph ph-flower-lotus text-2xl text-green-600"></i>
                     </div>
-                    <p class="text-sm text-gray-600 mb-4 h-12">Geoterapia, Aromaterapia, Florais e Reflexologia conforme
-                        necessidade.</p>
+                    <p class="text-sm text-gray-600 mb-4 h-12">Geotherapy, Aromatherapy, Flowers, and Reflexology as
+                        needed.</p>
                     <div class="border-t border-gray-200 pt-3 text-right">
-                        <span class="block text-xs text-gray-500">De R$ 150,00 por:</span>
-                        <span class="font-bold text-2xl text-brand-green">GRÁTIS</span>
+                        <span class="block text-xs text-gray-500">From R$ 150,00 for:</span>
+                        <span class="font-bold text-2xl text-brand-green">FREE</span>
                     </div>
                 </div>
 
@@ -476,103 +463,102 @@
                 <div
                     class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-lg hover:bg-white/20 transition md:col-span-2 lg:col-span-1">
                     <div class="flex justify-between items-start mb-4">
-                        <h3 class="font-bold text-xl">05. Exames de Precisão</h3>
+                        <h3 class="font-bold text-xl">05. Precision Exams</h3>
                         <i class="ph ph-flask text-2xl text-green-200"></i>
                     </div>
-                    <p class="text-sm text-green-100 mb-4 h-12">Interpretação funcional inclusa se exames complexos
-                        forem necessários.</p>
+                    <p class="text-sm text-green-100 mb-4 h-12">Functional interpretation included if complex exams are
+                        needed.</p>
                     <div class="border-t border-white/20 pt-3 text-right">
-                        <span class="block text-xs text-green-200">Valor Estimado: R$ 300</span>
-                        <span class="font-bold text-xl text-white">INCLUSO</span>
+                        <span class="block text-xs text-green-200">Estimated Value: R$ 300</span>
+                        <span class="font-bold text-xl text-white">INCLUDED</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PREÇO / ANCORAGEM -->
+    <!-- PRICE / ANCHORING -->
     <section id="oferta" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row">
-                <!-- Coluna Esquerda (Resumo) -->
+                <!-- Left Column (Summary) -->
                 <div
                     class="p-10 lg:w-1/2 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-gray-100">
-                    <h3 class="text-2xl font-serif font-bold text-gray-800 mb-6">Resumo do seu Plano:</h3>
+                    <h3 class="text-2xl font-serif font-bold text-gray-800 mb-6">Plan Summary:</h3>
                     <ul class="space-y-3 text-gray-600 mb-8">
-                        <li class="flex justify-between"><span>Consultas Iniciais</span> <span class="font-bold">4
-                                horas</span></li>
-                        <li class="flex justify-between"><span>Consultas Seguimento</span> <span class="font-bold">2
-                                horas</span></li>
-                        <li class="flex justify-between text-green-600"><span>Suporte</span> <span class="font-bold">120
-                                dias</span></li>
-                        <li class="flex justify-between text-green-600"><span>Práticas Integrativas</span> <span
-                                class="font-bold">Incluído</span></li>
-                        <li class="flex justify-between text-green-600"><span>Análise de Exames</span> <span
-                                class="font-bold">Incluído</span></li>
+                        <li class="flex justify-between"><span>Initial Consultations</span> <span class="font-bold">4
+                                hours</span></li>
+                        <li class="flex justify-between"><span>Follow-up Consultations</span> <span class="font-bold">2
+                                hours</span></li>
+                        <li class="flex justify-between text-green-600"><span>Support</span> <span class="font-bold">120
+                                days</span></li>
+                        <li class="flex justify-between text-green-600"><span>Integrative Practices</span> <span
+                                class="font-bold">Included</span></li>
+                        <li class="flex justify-between text-green-600"><span>Exams Analysis</span> <span
+                                class="font-bold">Included</span></li>
                     </ul>
                     <div class="pt-6 border-t border-gray-200">
-                        <p class="text-sm text-gray-500 uppercase tracking-wide">Valor total se contratado avulso:</p>
+                        <p class="text-sm text-gray-500 uppercase tracking-wide">Total value if hired separately:</p>
                         <p class="text-2xl font-bold text-gray-400 line-through decoration-red-500 decoration-2">R$
                             3.270,00</p>
                     </div>
                 </div>
 
-                <!-- Coluna Direita (Preço Final) -->
+                <!-- Right Column (Final Price) -->
                 <div class="p-10 lg:w-1/2 bg-brand-green/5 flex flex-col justify-center items-center text-center">
                     <span
-                        class="bg-green-100 text-brand-green px-4 py-1 rounded-full text-xs font-bold mb-4 uppercase tracking-wider">Oferta
-                        Especial - Protocolo 120 dias</span>
-                    <p class="text-gray-600 text-sm mb-2">Seu investimento hoje:</p>
+                        class="bg-green-100 text-brand-green px-4 py-1 rounded-full text-xs font-bold mb-4 uppercase tracking-wider">Special
+                        Offer - 120 Days Protocol</span>
+                    <p class="text-gray-600 text-sm mb-2">Your investment today:</p>
                     <div class="text-5xl font-serif font-bold text-brand-green mb-2">R$ 1.900</div>
-                    <p class="text-gray-500 text-sm mb-8">Economia real de <strong>R$ 1.370,00</strong></p>
+                    <p class="text-gray-500 text-sm mb-8">Real savings of <strong>R$ 1.370,00</strong></p>
 
-                    <a href="https://wa.me/556195021067?text=Ol%C3%A1.%20Gostaria%20de%20falar%20sobre%20o%20protocolo%20terap%C3%AAutico%20para%20doen%C3%A7as%20autoimunes"
+                    <a href="https://wa.me/556195021067?text=Hello.%20I%20would%20like%20to%20know%20more%20about%20the%20autoimmune%20protocol"
                         target="_blank"
                         class="w-full bg-brand-accent text-white py-4 rounded-lg font-bold text-lg shadow-lg hover:bg-yellow-700 transition hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center">
-                        GARANTIR MINHA VAGA <i class="ph ph-arrow-right ml-2"></i>
+                        SECURE MY SPOT <i class="ph ph-arrow-right ml-2"></i>
                     </a>
 
-                    <!-- Selo de Garantia -->
+                    <!-- Guarantee Seal -->
                     <div class="mt-8 flex items-center gap-3 bg-white px-4 py-2 rounded-lg shadow-sm">
                         <i class="ph ph-shield-check text-3xl text-brand-green"></i>
                         <div class="text-left">
-                            <p class="font-bold text-brand-dark text-sm">Garantia de 15 Dias</p>
-                            <p class="text-xs text-gray-500">Não amou a 1ª consulta? Devolvo 100%.</p>
+                            <p class="font-bold text-brand-dark text-sm">15-Day Guarantee</p>
+                            <p class="text-xs text-gray-500">Didn't love the 1st consult? 100% refund.</p>
                         </div>
                     </div>
-                    <p class="mt-4 text-xs text-gray-500 text-center">Consulte condições de parcelamento.</p>
+                    <p class="mt-4 text-xs text-gray-500 text-center">Check installment options.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BIO ESPECIALISTA -->
+    <!-- BIO SPECIALIST -->
     <section id="sobre" class="py-20 bg-white">
         <div class="container mx-auto px-6 max-w-5xl">
             <div class="flex flex-col md:flex-row items-center gap-10">
                 <div class="w-full md:w-1/3">
-                    <!-- Foto Especialista Otimizada -->
-                    <img src="lauriana.webp" alt="Foto da Dra. Lauriana de Magalhães Silva"
+                    <img src="lauriana.webp" alt="Photo of Dr. Lauriana de Magalhães Silva"
                         class="w-full aspect-square object-cover rounded-full shadow-2xl border-4 border-white"
                         loading="lazy" width="400" height="400">
                 </div>
                 <div class="w-full md:w-2/3">
-                    <h2 class="text-3xl font-serif font-bold text-gray-900 mb-4">Dra. Lauriana de Magalhães Silva</h2>
-                    <h3 class="text-brand-green font-bold mb-6">Nutrição Funcional & Autoimunidade</h3>
+                    <h2 class="text-3xl font-serif font-bold text-gray-900 mb-4">Dr. Lauriana de Magalhães Silva</h2>
+                    <h3 class="text-brand-green font-bold mb-6">Functional Nutrition & Autoimmunity</h3>
                     <p class="text-gray-600 leading-relaxed mb-4">
-                        Especialista em Nutrição para Autoimunidade, a Dra. Lauriana combina a ciência da bioquímica
-                        nutricional com o olhar humano das terapias integrativas.
+                        Specialist in Nutrition for Autoimmunity, Dr. Lauriana combines the science of nutritional
+                        biochemistry with the human touch of integrative therapies.
                     </p>
                     <p class="text-gray-600 leading-relaxed">
-                        Seu objetivo é provar que o diagnóstico não é uma sentença, e que é possível viver sem
-                        inflamação através da modulação do terreno biológico e do estilo de vida.
+                        Her goal is to prove that the diagnosis is not a sentence, and that it is possible to live
+                        without inflammation through the modulation of the biological terrain and lifestyle.
                     </p>
                     <div class="mt-6 flex items-center gap-4">
-                        <img src="crn-1-logo.png" alt="Selo CRN"
+                        <img src="crn-1-logo.png" alt="CRN Seal"
                             class="h-16 opacity-70 grayscale hover:grayscale-0 transition">
                         <div class="border-l border-gray-200 pl-4 text-left">
-                            <p class="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-bold">Registro
-                                Profissional</p>
+                            <p class="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-bold">Professional
+                                Registration</p>
                             <p class="text-xl font-serif font-bold text-brand-green">CRN1 23987/P</p>
                         </div>
                     </div>
@@ -581,64 +567,64 @@
         </div>
     </section>
 
-    <!-- FAQ (Accordion) -->
+    <!-- FAQ -->
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-6 max-w-3xl">
-            <h2 class="text-3xl font-serif font-bold text-center text-gray-900 mb-12">Perguntas Frequentes</h2>
+            <h2 class="text-3xl font-serif font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
 
             <div class="space-y-4">
-                <!-- Pergunta 1 -->
+                <!-- Question 1 -->
                 <details class="bg-white p-6 rounded-lg shadow-sm cursor-pointer group">
                     <summary class="flex justify-between items-center font-bold text-lg list-none text-gray-800">
-                        As consultas são presenciais ou online?
+                        Are consultations in-person or online?
                         <span class="transition group-open:rotate-180"><i class="ph ph-caret-down"></i></span>
                     </summary>
                     <p class="text-gray-600 mt-4 leading-relaxed">
-                        Temos flexibilidade total! As duas consultas iniciais (de 2 horas cada) podem ser presenciais ou
-                        online, o que for melhor para você. Os seguimentos (1 hora) são online para otimizar seu tempo.
+                        We have total flexibility! The two initial consultations (2 hours each) can be in-person or
+                        online, whichever is best for you. Follow-ups (1 hour) are online to optimize your time.
                     </p>
                 </details>
 
-                <!-- Pergunta 2 -->
+                <!-- Question 2 -->
                 <details class="bg-white p-6 rounded-lg shadow-sm cursor-pointer group">
                     <summary class="flex justify-between items-center font-bold text-lg list-none text-gray-800">
-                        O que acontece se eu tiver dúvidas entre as consultas?
+                        What happens if I have questions between consultations?
                         <span class="transition group-open:rotate-180"><i class="ph ph-caret-down"></i></span>
                     </summary>
                     <p class="text-gray-600 mt-4 leading-relaxed">
-                        Esse é o grande diferencial deste plano. Você tem o Acompanhamento Intratratamento de 120 dias
-                        incluso gratuitamente. Você terá um canal direto para suporte técnico.
+                        This is the great differentiator of this plan. You have 120-day Intra-treatment Follow-up
+                        included for free. You will have a direct channel for technical support.
                     </p>
                 </details>
 
-                <!-- Pergunta 3 -->
+                <!-- Question 3 -->
                 <details class="bg-white p-6 rounded-lg shadow-sm cursor-pointer group">
                     <summary class="flex justify-between items-center font-bold text-lg list-none text-gray-800">
-                        Preciso parar meus remédios atuais?
+                        Do I need to stop my current medications?
                         <span class="transition group-open:rotate-180"><i class="ph ph-caret-down"></i></span>
                     </summary>
                     <p class="text-gray-600 mt-4 leading-relaxed">
-                        Jamais. A nutrição funciona de forma complementar ao tratamento médico. Nosso objetivo é
-                        fortalecer seu organismo. Alterações em medicação dependem exclusivamente do seu médico.
+                        Never. Nutrition works complementarily to medical treatment. Our goal is to strengthen your
+                        organism. Changes in medication depend exclusively on your doctor.
                     </p>
                 </details>
 
-                <!-- Pergunta 4 -->
+                <!-- Question 4 -->
                 <details class="bg-white p-6 rounded-lg shadow-sm cursor-pointer group">
                     <summary class="flex justify-between items-center font-bold text-lg list-none text-gray-800">
-                        As Práticas Integrativas são obrigatórias?
+                        Are Integrative Practices mandatory?
                         <span class="transition group-open:rotate-180"><i class="ph ph-caret-down"></i></span>
                     </summary>
                     <p class="text-gray-600 mt-4 leading-relaxed">
-                        Não. Elas são ferramentas poderosas (Aromaterapia, Florais, etc.) que coloco à disposição para
-                        acelerar sua melhora e conforto, mas o uso será decidido em conjunto com você.
+                        No. They are powerful tools (Aromatherapy, Florals, etc.) that I make available to accelerate
+                        your improvement and comfort, but their use will be decided together with you.
                     </p>
                 </details>
             </div>
         </div>
     </section>
 
-    <!-- LEAD MAGNET (Isca Digital) -->
+    <!-- LEAD MAGNET -->
     <section class="py-24 bg-brand-green relative overflow-hidden">
         <!-- Decoration -->
         <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-white opacity-5 rounded-full blur-3xl"></div>
@@ -647,47 +633,47 @@
         <div class="container mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-12">
             <div class="w-full md:w-1/2 text-white">
                 <span
-                    class="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Material
-                    Gratuito</span>
-                <h2 class="text-3xl lg:text-4xl font-serif font-bold mb-4">Ainda não está pronto para o Protocolo?</h2>
-                <p class="text-green-50 text-lg mb-8">Comece hoje mesmo com passos simples. Baixe meu e-book exclusivo:
-                    <strong>"3 Passos para Desinflamar seu Café da Manhã"</strong>.
+                    class="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Free
+                    Material</span>
+                <h2 class="text-3xl lg:text-4xl font-serif font-bold mb-4">Not ready for the Protocol yet?</h2>
+                <p class="text-green-50 text-lg mb-8">Start today with simple steps. Download my exclusive e-book:
+                    <strong>"3 Steps to De-inflame your Breakfast"</strong>.
                 </p>
                 <ul class="space-y-2 mb-8 text-green-100/90">
-                    <li class="flex items-center"><i class="ph ph-check mr-2"></i> Substituições inteligentes sem glúten
+                    <li class="flex items-center"><i class="ph ph-check mr-2"></i> Smart gluten-free substitutions
                     </li>
-                    <li class="flex items-center"><i class="ph ph-check mr-2"></i> Receitas de sucos terapêuticos</li>
-                    <li class="flex items-center"><i class="ph ph-check mr-2"></i> O segredo do Jejum Metabólico</li>
+                    <li class="flex items-center"><i class="ph ph-check mr-2"></i> Therapeutic juice recipes</li>
+                    <li class="flex items-center"><i class="ph ph-check mr-2"></i> The secret of Metabolic Fasting</li>
                 </ul>
             </div>
 
             <div class="w-full md:w-1/2 bg-white rounded-2xl p-8 shadow-2xl">
                 <form class="space-y-4"
-                    onsubmit="event.preventDefault(); alert('Obrigado! O E-book foi enviado para seu e-mail.');">
+                    onsubmit="event.preventDefault(); alert('Thank you! The E-book has been sent to your email.');">
                     <div>
-                        <label class="block text-gray-700 text-sm font-bold mb-2 ml-1">Seu Nome</label>
+                        <label class="block text-gray-700 text-sm font-bold mb-2 ml-1">Your Name</label>
                         <input type="text"
                             class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brand-green focus:ring-2 focus:ring-brand-green/20 outline-none transition"
-                            placeholder="Como gosta de ser chamado?">
+                            placeholder="What should we call you?">
                     </div>
                     <div>
-                        <label class="block text-gray-700 text-sm font-bold mb-2 ml-1">Seu Melhor E-mail</label>
+                        <label class="block text-gray-700 text-sm font-bold mb-2 ml-1">Your Best Email</label>
                         <input type="email"
                             class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brand-green focus:ring-2 focus:ring-brand-green/20 outline-none transition"
-                            placeholder="exemplo@email.com">
+                            placeholder="example@email.com">
                     </div>
                     <div>
                         <label class="block text-gray-700 text-sm font-bold mb-2 ml-1">WhatsApp</label>
                         <input type="tel"
                             class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brand-green focus:ring-2 focus:ring-brand-green/20 outline-none transition"
-                            placeholder="(DD) 99999-9999">
+                            placeholder="+55 (DD) 99999-9999">
                     </div>
                     <button type="submit"
                         class="w-full bg-brand-accent text-white font-bold py-4 rounded-lg hover:bg-yellow-700 transition shadow-lg transform hover:-translate-y-1">
-                        RECEBER E-BOOK GRÁTIS
+                        GET FREE E-BOOK
                     </button>
                     <p class="text-center text-xs text-gray-400 mt-4">
-                        <i class="ph ph-lock-key"></i> Seus dados estão 100% seguros. Zero spam.
+                        <i class="ph ph-lock-key"></i> Your data is 100% secure. Zero spam.
                     </p>
                 </form>
             </div>
@@ -697,30 +683,30 @@
     <!-- FOOTER -->
     <footer class="bg-brand-dark text-white py-12 border-t border-gray-800">
         <div class="container mx-auto px-6 text-center">
-            <h3 class="text-2xl font-serif font-bold mb-6">Dra. Lauriana de Magalhães Silva</h3>
-            <p class="text-gray-400 mb-8 max-w-lg mx-auto">Não deixe a inflamação roubar mais um dia da sua vida. Agende
-                agora e garanta o pacote com todos os bônus inclusos.</p>
+            <h3 class="text-2xl font-serif font-bold mb-6">Dr. Lauriana de Magalhães Silva</h3>
+            <p class="text-gray-400 mb-8 max-w-lg mx-auto">Don't let inflammation steal another day from your life.
+                Schedule now and secure the package with all bonuses included.</p>
 
             <a href="#oferta"
                 class="bg-brand-green hover:bg-green-700 text-white px-8 py-3 rounded-full font-bold transition inline-block mb-12">
-                Agendar Agora
+                Schedule Now
             </a>
 
             <div class="text-sm text-gray-500 pt-8 border-t border-gray-800">
-                &copy; 2026 Dra. Lauriana de Magalhães Silva. Todos os direitos reservados.
+                &copy; 2026 Dr. Lauriana de Magalhães Silva. All rights reserved.
             </div>
         </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/556195021067?text=Ol%C3%A1.%20Gostaria%20de%20falar%20sobre%20o%20protocolo%20terap%C3%AAutico%20para%20doen%C3%A7as%20autoimunes"
+    <a href="https://wa.me/556195021067?text=Hello.%20I%20would%20like%20to%20know%20more%20about%20the%20autoimmune%20protocol"
         target="_blank"
         class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition z-50 flex items-center justify-center group"
-        title="Falar no WhatsApp">
+        title="Talk on WhatsApp">
         <i class="ph ph-whatsapp-logo text-3xl"></i>
         <span
             class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out whitespace-nowrap text-sm font-bold ml-0 group-hover:ml-2">
-            Tirar Dúvidas
+            Ask Questions
         </span>
     </a>
 
