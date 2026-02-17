@@ -18,10 +18,12 @@ export const onRequest = async (context: EventContext) => {
     let targetLang = "pt";
 
     if (acceptLanguage) {
-        if (acceptLanguage.includes("en")) {
-            targetLang = "en";
+        if (acceptLanguage.includes("pt")) {
+            targetLang = "pt";
         } else if (acceptLanguage.includes("es")) {
             targetLang = "es";
+        } else if (acceptLanguage.includes("en")) {
+            targetLang = "en";
         }
     }
 
