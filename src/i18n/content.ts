@@ -17,7 +17,7 @@ export const content = {
             {
                 slug: "smoothie-verde-detox",
                 title: "Smoothie Verde Detox",
-                image: "https://images.unsplash.com/photo-1610970881699-44a5587cabec?q=80&w=1974&auto=format&fit=crop",
+                image: "/receitas-verde-detox.avif",
                 tags: ["Sem Glúten", "Sem Lactose"],
                 prepTime: "5 min",
                 servings: "1 porção",
@@ -38,7 +38,7 @@ export const content = {
             {
                 slug: "bolo-banana-funcional",
                 title: "Bolo de Banana Funcional",
-                image: "https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=1978&auto=format&fit=crop",
+                image: "/receitas-banana-funcional.avif",
                 tags: ["Sem Açúcar", "Rico em Fibras"],
                 prepTime: "40 min",
                 servings: "8 fatias",
@@ -59,7 +59,7 @@ export const content = {
             {
                 slug: "panqueca-aveia-mel",
                 title: "Panqueca de Aveia e Mel",
-                image: "https://images.unsplash.com/photo-1506084868230-bb9d95c24759?q=80&w=1974&auto=format&fit=crop",
+                image: "/receitas-aveia-mel.avif",
                 tags: ["Café da Manhã", "Energético"],
                 prepTime: "15 min",
                 servings: "2 porções",
@@ -96,7 +96,7 @@ export const content = {
           <p>O tratamento envolve a retirada de alimentos inflamatórios e a inclusão de prebióticos e probióticos específicos.</p>
         `,
                 date: "18 Nov 2023",
-                image: "https://images.unsplash.com/photo-1576091160550-2187d80a18f7?q=80&w=2070&auto=format&fit=crop"
+                image: "/artigos-tea.avif"
             },
             {
                 slug: "estrategias-nutricionais-tdah",
@@ -110,7 +110,7 @@ export const content = {
           <p>Corantes artificiais, excesso de açúcar e alimentos ultraprocessados podem piorar a hiperatividade e a impulsividade.</p>
         `,
                 date: "10 Nov 2023",
-                image: "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?q=80&w=1974&auto=format&fit=crop"
+                image: "/artigos-tdah.avif"
             },
             {
                 slug: "suplementacao-sindrome-down",
@@ -123,7 +123,7 @@ export const content = {
           <p>Cada protocolo deve ser individualizado, baseando-se em exames bioquímicos e na clínica do paciente.</p>
         `,
                 date: "05 Nov 2023",
-                image: "https://images.unsplash.com/photo-1584515933487-9bdb1f2ce343?q=80&w=1974&auto=format&fit=crop"
+                image: "/artigos-sindrome-down.avif"
             }
         ],
         testimonials: [
@@ -165,7 +165,7 @@ export const content = {
             {
                 slug: "green-detox-smoothie",
                 title: "Green Detox Smoothie",
-                image: "https://images.unsplash.com/photo-1610970881699-44a5587cabec?q=80&w=1974&auto=format&fit=crop",
+                image: "/receitas-verde-detox.avif",
                 tags: ["Gluten Free", "Lactose Free"],
                 prepTime: "5 min",
                 servings: "1 serving",
@@ -186,7 +186,7 @@ export const content = {
             {
                 slug: "functional-banana-cake",
                 title: "Functional Banana Cake",
-                image: "https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=1978&auto=format&fit=crop",
+                image: "/receitas-banana-funcional.avif",
                 tags: ["Sugar Free", "High Fiber"],
                 prepTime: "40 min",
                 servings: "8 slices",
@@ -207,7 +207,7 @@ export const content = {
             {
                 slug: "oat-honey-pancakes",
                 title: "Oat and Honey Pancakes",
-                image: "https://images.unsplash.com/photo-1506084868230-bb9d95c24759?q=80&w=1974&auto=format&fit=crop",
+                image: "/receitas-aveia-mel.avif",
                 tags: ["Breakfast", "Energetic"],
                 prepTime: "15 min",
                 servings: "2 servings",
@@ -244,7 +244,7 @@ export const content = {
           <p>Treatment involves removing inflammatory foods and including specific prebiotics and probiotics.</p>
         `,
                 date: "Nov 18, 2023",
-                image: "https://images.unsplash.com/photo-1576091160550-2187d80a18f7?q=80&w=2070&auto=format&fit=crop"
+                image: "/artigos-tea.avif"
             },
             {
                 slug: "nutritional-strategies-adhd",
@@ -258,7 +258,7 @@ export const content = {
           <p>Artificial colors, excess sugar, and ultra-processed foods can worsen hyperactivity and impulsivity.</p>
         `,
                 date: "Nov 10, 2023",
-                image: "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?q=80&w=1974&auto=format&fit=crop"
+                image: "/artigos-tdah.avif"
             },
             {
                 slug: "supplementation-down-syndrome",
@@ -271,7 +271,7 @@ export const content = {
           <p>Each protocol must be individualized, based on biochemical tests and the patient's clinical condition.</p>
         `,
                 date: "Nov 05, 2023",
-                image: "https://images.unsplash.com/photo-1584515933487-9bdb1f2ce343?q=80&w=1974&auto=format&fit=crop"
+                image: "/artigos-sindrome-down.avif"
             }
         ],
         testimonials: [
@@ -313,7 +313,7 @@ export const content = {
             {
                 slug: "batido-verde-detox",
                 title: "Batido Verde Detox",
-                image: "https://images.unsplash.com/photo-1610970881699-44a5587cabec?q=80&w=1974&auto=format&fit=crop",
+                image: "/receitas-verde-detox.avif",
                 tags: ["Sin Gluten", "Sin Lactosa"],
                 prepTime: "5 min",
                 servings: "1 porción",
@@ -334,7 +334,7 @@ export const content = {
             {
                 slug: "pastel-platano-funcional",
                 title: "Pastel de Plátano Funcional",
-                image: "https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=1978&auto=format&fit=crop",
+                image: "/receitas-banana-funcional.avif",
                 tags: ["Sin Azúcar", "Rico en Fibra"],
                 prepTime: "40 min",
                 servings: "8 rebanadas",
@@ -355,7 +355,7 @@ export const content = {
             {
                 slug: "tortitas-avena-miel",
                 title: "Tortitas de Avena y Miel",
-                image: "https://images.unsplash.com/photo-1506084868230-bb9d95c24759?q=80&w=1974&auto=format&fit=crop",
+                image: "/receitas-aveia-mel.avif",
                 tags: ["Desayuno", "Energético"],
                 prepTime: "15 min",
                 servings: "2 porciones",
@@ -392,7 +392,7 @@ export const content = {
           <p>El tratamiento implica eliminar los alimentos inflamatorios e incluir prebióticos y probióticos específicos.</p>
         `,
                 date: "18 Nov 2023",
-                image: "https://images.unsplash.com/photo-1576091160550-2187d80a18f7?q=80&w=2070&auto=format&fit=crop"
+                image: "/artigos-tea.avif"
             },
             {
                 slug: "estrategias-nutricionales-tdah",
@@ -406,7 +406,7 @@ export const content = {
           <p>Los colorantes artificiales, el exceso de azúcar y los alimentos ultraprocesados pueden empeorar la hiperactividad y la impulsividad.</p>
         `,
                 date: "10 Nov 2023",
-                image: "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?q=80&w=1974&auto=format&fit=crop"
+                image: "/artigos-tdah.avif"
             },
             {
                 slug: "suplementacion-sindrome-down",
@@ -419,7 +419,7 @@ export const content = {
           <p>Cada protocolo debe ser individualizado, basándose en pruebas bioquímicas y la condición clínica del paciente.</p>
         `,
                 date: "05 Nov 2023",
-                image: "https://images.unsplash.com/photo-1584515933487-9bdb1f2ce343?q=80&w=1974&auto=format&fit=crop"
+                image: "/artigos-sindrome-down.avif"
             }
         ],
         testimonials: [
