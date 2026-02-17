@@ -8,6 +8,8 @@ export const defaultLang = 'pt';
 
 export const ui = {
     pt: {
+        'meta.title': 'Dra. Lauriana Silva | Nutrição Especializada em TEA, TDAH e T21',
+        'meta.description': 'Nutricionista Lauriana de Magalhães Silva - Especialista em TEA, TDAH e T21. Uma abordagem integrativa para transformar a saúde e qualidade de vida.',
         'nav.home': 'Início',
         'nav.about': 'Sobre',
         'nav.services': 'Serviços',
@@ -64,6 +66,8 @@ export const ui = {
         'whatsapp.message': 'Olá! Gostaria de saber mais sobre seu atendimento nutricional.',
     },
     en: {
+        'meta.title': 'Dr. Lauriana Silva | Specialized Nutrition in ASD, ADHD and T21',
+        'meta.description': 'Nutritionist Lauriana de Magalhães Silva - Specialist in ASD, ADHD and T21. An integrative approach to transform health and quality of life.',
         'nav.home': 'Home',
         'nav.about': 'About',
         'nav.services': 'Services',
@@ -120,6 +124,8 @@ export const ui = {
         'whatsapp.message': 'Hello! I would like to know more about your nutritional consulting.',
     },
     es: {
+        'meta.title': 'Dra. Lauriana Silva | Nutrición Especializada en TEA, TDAH y T21',
+        'meta.description': 'Nutricionista Lauriana de Magalhães Silva - Especialista en TEA, TDAH y T21. Un enfoque integrador para transformar la salud y la calidad de vida.',
         'nav.home': 'Inicio',
         'nav.about': 'Sobre Mí',
         'nav.services': 'Servicios',

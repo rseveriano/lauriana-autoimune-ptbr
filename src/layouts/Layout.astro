@@ -2,30 +2,56 @@
 import '@fontsource/inter';
 import '@fontsource/outfit';
 import { ViewTransitions } from 'astro:transitions';
+import { useTranslations } from '../i18n/utils';
 
 interface Props {
-	title: string;
-    lang?: string;
+	title?: string;
+    lang?: 'pt' | 'en' | 'es';
 }
 
-const { title, lang = 'pt-br' } = Astro.props;
+const { title: propTitle, lang = 'pt' } = Astro.props;
+const t = useTranslations(lang as any);
+
+const title = propTitle || t('meta.title');
+const description = t('meta.description');
+
+// SEO logic for subpages and root
+const pathname = Astro.url.pathname;
+const cleanPath = pathname.replace(/^\/(en|es|pt)/, '') || '/';
+
+const getVersion = (l: string) => {
+    if (cleanPath === '/') return l === 'pt' ? '/' : `/${l}`;
+    return `/${l}${cleanPath}`;
+}
+
+const ptURL = new URL(getVersion('pt'), Astro.site);
+const enURL = new URL(getVersion('en'), Astro.site);
+const esURL = new URL(getVersion('es'), Astro.site);
 ---
 
 <!doctype html>
 <html lang={lang} class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Nutricionista Lauriana de Magalhães Silva - Especialista em TEA, TDAH e T21" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/logo-top-tea.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+
+        <!-- OpenGraph / Social Media -->
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="https://atypicalbrains.win/ai/planta.webp" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content={lang === 'pt' ? 'pt_BR' : lang === 'es' ? 'es_ES' : 'en_US'} />
+        <meta name="twitter:card" content="summary_large_image" />
 
         <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
-        <link rel="alternate" hreflang="pt" href={new URL(Astro.url.pathname.replace(/^\/(en|es)/, ''), Astro.site)} />
-        <link rel="alternate" hreflang="en" href={new URL(`/en${Astro.url.pathname.replace(/^\/(en|es)/, '')}`, Astro.site)} />
-        <link rel="alternate" hreflang="es" href={new URL(`/es${Astro.url.pathname.replace(/^\/(en|es)/, '')}`, Astro.site)} />
-        <link rel="alternate" hreflang="x-default" href={new URL(Astro.url.pathname.replace(/^\/(en|es)/, ''), Astro.site)} />
+        <link rel="alternate" hreflang="pt" href={ptURL} />
+        <link rel="alternate" hreflang="en" href={enURL} />
+        <link rel="alternate" hreflang="es" href={esURL} />
+        <link rel="alternate" hreflang="x-default" href={ptURL} />
 		<ViewTransitions />
         
         <!-- Phosphor Icons -->

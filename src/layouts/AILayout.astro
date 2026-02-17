@@ -18,6 +18,21 @@ const { title, description, lang } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 
+        {/* Hreflang for SEO */}
+        <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+        <link rel="alternate" hreflang="pt" href={new URL('/ai', Astro.site)} />
+        <link rel="alternate" hreflang="en" href={new URL('/ai/en', Astro.site)} />
+        <link rel="alternate" hreflang="es" href={new URL('/ai/es', Astro.site)} />
+        <link rel="alternate" hreflang="x-default" href={new URL('/ai', Astro.site)} />
+
+        <!-- OpenGraph / Social Media -->
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="https://atypicalbrains.win/ai/planta.webp" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content={lang === 'pt' ? 'pt_BR' : lang === 'es' ? 'es_ES' : 'en_US'} />
+        <meta name="twitter:card" content="summary_large_image" />
+
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
