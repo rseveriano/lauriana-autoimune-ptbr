@@ -19,10 +19,9 @@ const navLinks = [
     <div class="container mx-auto px-6 py-4">
         <div class="flex justify-between items-center">
             <!-- Logo -->
-            <a href={lang === 'pt' ? '/' : lang === 'en' ? '/en' : '/es'} class="group block" aria-label={t('nav.home')}>
-                <div class="text-2xl font-playfair font-bold text-brand-green tracking-wide group-hover:opacity-80 transition">
-                    Dra. Lauriana<span class="text-sm block font-lato font-normal text-gray-500">Nutrição & Autoimunidade</span>
-                </div>
+            <a href={lang === 'pt' ? '/' : `/${lang}`} class="text-2xl font-heading font-bold text-dark flex items-center gap-2 z-50">
+                <img src="/logo-top-tea.svg" alt="Logo Top TEA" class="h-12 w-auto object-contain" />
+                <span>Lauriana<span class="text-primary">Silva</span></span>
             </a>
 
             <!-- Desktop Nav -->
@@ -55,7 +54,7 @@ const navLinks = [
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu"
             class="md:hidden absolute top-full left-6 right-6 bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 space-y-4 transform scale-95 origin-top transition-all duration-300 opacity-0 pointer-events-none data-[open=true]:opacity-100 data-[open=true]:pointer-events-auto data-[open=true]:scale-100">
-            <a href={lang === 'pt' ? '/' : lang === 'en' ? '/en' : '/es'} class="block text-brand-green font-bold py-3 border-b border-gray-50 flex items-center">
+            <a href={lang === 'pt' ? '/' : `/${lang}`} class="block text-brand-green font-bold py-3 border-b border-gray-50 flex items-center">
                 <i class="ph ph-house mr-2 text-xl"></i> {t('nav.home')}
             </a>
             {navLinks.map(link => (
@@ -63,7 +62,7 @@ const navLinks = [
             ))}
 
             <div class="flex items-center justify-between py-2">
-                <span class="text-gray-500 text-sm font-medium">Idioma:</span>
+                <span class="text-gray-500 text-sm font-medium">{t('nav.language')}:</span>
                 <div class="flex items-center gap-4">
                     <a href="/ai/" class={lang === 'pt' ? 'text-brand-green font-bold' : 'text-gray-400 hover:text-brand-green transition'}>PT</a>
                     <a href="/ai/en" class={lang === 'en' ? 'text-brand-green font-bold' : 'text-gray-400 hover:text-brand-green transition'}>EN</a>

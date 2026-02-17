@@ -17,7 +17,7 @@ const { title, lang = 'pt-br' } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Nutricionista Lauriana de Magalhães Silva - Especialista em TEA, TDAH e T21" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
+		<link rel="icon" type="image/svg+xml" href="/logo-top-tea.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 
@@ -27,6 +27,9 @@ const { title, lang = 'pt-br' } = Astro.props;
         <link rel="alternate" hreflang="es" href={new URL(`/es${Astro.url.pathname.replace(/^\/(en|es)/, '')}`, Astro.site)} />
         <link rel="alternate" hreflang="x-default" href={new URL(Astro.url.pathname.replace(/^\/(en|es)/, ''), Astro.site)} />
 		<ViewTransitions />
+        
+        <!-- Phosphor Icons -->
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
 	</head>
 	<body class="bg-secondary text-dark font-sans antialiased">
 		<slot />
