@@ -77,7 +77,8 @@ const waLink = `https://wa.me/5561995021067?text=${encodeURIComponent(waMessage)
 
 					// 2. Define o src para carregar e iniciar automaticamente o vídeo
 					// O parâmetro 'autoplay=1' garante que o vídeo comece a tocar
-					iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+					// O parâmetro 'rel=0' limita as sugestões ao mesmo canal
+					iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
 
 					// 3. Aplica estilos para ocupar todo o espaço
 					iframe.style.width = '100%';
