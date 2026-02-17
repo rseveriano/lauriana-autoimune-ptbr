@@ -119,34 +119,40 @@ const waLink = `https://wa.me/5561995021067?text=${encodeURIComponent(waMessage)
 </header>
 
 <script>
-    const btn = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
+    const initMobileMenu = () => {
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
 
-    if (btn && menu) {
-        btn.addEventListener('click', () => {
-            const isOpen = menu.getAttribute('data-open') === 'true';
-            menu.setAttribute('data-open', (!isOpen).toString());
-            
-            const icon = btn.querySelector('i');
-            if (icon) {
-                if (!isOpen) { // If we are opening it
-                    icon.classList.replace('ph-list', 'ph-x');
-                } else {
-                    icon.classList.replace('ph-x', 'ph-list');
-                }
-            }
-        });
-
-        // Close menu when clicking a link
-        const links = menu.querySelectorAll('a');
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.setAttribute('data-open', 'false');
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                const isOpen = menu.getAttribute('data-open') === 'true';
+                menu.setAttribute('data-open', (!isOpen).toString());
+                
                 const icon = btn.querySelector('i');
                 if (icon) {
-                    icon.classList.replace('ph-x', 'ph-list');
+                    if (!isOpen) {
+                        icon.classList.remove('ph-list');
+                        icon.classList.add('ph-x');
+                    } else {
+                        icon.classList.remove('ph-x');
+                        icon.classList.add('ph-list');
+                    }
                 }
             });
-        });
-    }
+
+            const links = menu.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.setAttribute('data-open', 'false');
+                    const icon = btn.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('ph-x');
+                        icon.classList.add('ph-list');
+                    }
+                });
+            });
+        }
+    };
+
+    document.addEventListener('astro:page-load', initMobileMenu);
 </script>

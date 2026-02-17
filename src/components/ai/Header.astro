@@ -90,11 +90,26 @@ const navLinks = [
             const icon = btn.querySelector('i');
             if (icon) {
                 if (!isOpen) { // If we are opening it
-                    icon.classList.replace('ph-list', 'ph-x');
+                    icon.classList.remove('ph-list');
+                    icon.classList.add('ph-x');
                 } else {
-                    icon.classList.replace('ph-x', 'ph-list');
+                    icon.classList.remove('ph-x');
+                    icon.classList.add('ph-list');
                 }
             }
+        });
+
+        // Close menu when clicking a link
+        const links = menu.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.setAttribute('data-open', 'false');
+                const icon = btn.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('ph-x');
+                    icon.classList.add('ph-list');
+                }
+            });
         });
     }
 </script>
