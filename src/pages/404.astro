@@ -1,0 +1,33 @@
+---
+import { languages, defaultLang, ui } from '../i18n/ui';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<html lang={lang}>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>404 - {lang === 'pt' ? 'Página não encontrada' : lang === 'es' ? 'Página no encontrada' : 'Page Not Found'}</title>
+    </head>
+    <body class="bg-gray-50 flex items-center justify-center min-h-screen text-center px-4">
+        <div class="space-y-6">
+            <h1 class="text-9xl font-bold text-primary opacity-20">404</h1>
+            <h2 class="text-4xl font-bold text-gray-800">
+                {lang === 'pt' ? 'Ops! Página não encontrada.' : lang === 'es' ? '¡Ups! Página no encontrada.' : 'Oops! Page not found.'}
+            </h2>
+            <p class="text-xl text-gray-600 max-w-lg mx-auto">
+                {lang === 'pt' 
+                    ? 'A página que você está procurando pode ter sido removida ou não existe.' 
+                    : lang === 'es' 
+                    ? 'La página que buscas puede haber sido eliminada o no existe.' 
+                    : 'The page you are looking for might have been removed or does not exist.'}
+            </p>
+            <a href="/" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-primary/90 transition-colors">
+                {t('nav.home')}
+            </a>
+        </div>
+    </body>
+</html>

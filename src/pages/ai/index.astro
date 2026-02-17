@@ -1,0 +1,32 @@
+---
+import AILayout from '../../layouts/AILayout.astro';
+import Header from '../../components/ai/Header.astro';
+import Hero from '../../components/ai/Hero.astro';
+import PainPoints from '../../components/ai/PainPoints.astro';
+import Method from '../../components/ai/Method.astro';
+import Testimonials from '../../components/ai/Testimonials.astro';
+import Offer from '../../components/ai/Offer.astro';
+import Bio from '../../components/ai/Bio.astro';
+import FAQ from '../../components/ai/FAQ.astro';
+import LeadMagnet from '../../components/ai/LeadMagnet.astro';
+import Footer from '../../components/ai/Footer.astro';
+import { aiTranslations } from '../../i18n/ai';
+
+const lang = 'pt';
+const t = (key: keyof typeof aiTranslations['pt']) => aiTranslations[lang][key];
+---
+
+<AILayout title={t('meta.title')} description={t('meta.description')} lang={lang}>
+    <Header lang={lang} />
+    <main>
+        <Hero lang={lang} />
+        <PainPoints lang={lang} />
+        <Method lang={lang} />
+        <Testimonials lang={lang} />
+        <Offer lang={lang} />
+        <Bio lang={lang} />
+        <FAQ lang={lang} />
+        <LeadMagnet lang={lang} />
+    </main>
+    <Footer lang={lang} />
+</AILayout>

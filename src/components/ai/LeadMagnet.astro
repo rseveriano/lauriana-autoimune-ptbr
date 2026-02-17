@@ -1,0 +1,93 @@
+---
+import { aiTranslations } from '../../i18n/ai';
+
+interface Props {
+    lang: 'pt' | 'en' | 'es';
+}
+
+const { lang } = Astro.props;
+const t = (key: keyof typeof aiTranslations['pt']) => aiTranslations[lang][key];
+
+const waMessage = t('ebook.whatsapp.message');
+const waLink = `https://wa.me/5561995021067?text=${encodeURIComponent(waMessage)}`;
+---
+
+<section class="py-24 bg-brand-green relative overflow-hidden">
+    <!-- Decoration -->
+    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-white opacity-5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-white opacity-5 rounded-full blur-3xl"></div>
+
+    <div class="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
+        <!-- Image (Visual Column) -->
+        <div class="w-full lg:w-5/12 order-2 lg:order-1 flex justify-center">
+            <div class="relative group">
+                <img src="/ai/ebook.png" alt="E-book Mockup"
+                    class="w-full max-w-sm rounded-2xl shadow-2xl transform lg:-rotate-3 group-hover:rotate-0 transition-transform duration-500 border-4 border-white/10"
+                    loading="lazy" width="400" height="600">
+                <!-- Decorative glow -->
+                <div class="absolute inset-0 bg-brand-gold/10 blur-3xl rounded-full -z-10 scale-90 opacity-50">
+                </div>
+            </div>
+        </div>
+
+        <!-- Content (Text Column) -->
+        <div class="w-full lg:w-7/12 text-white order-1 lg:order-2">
+            <span class="inline-block bg-brand-gold text-brand-dark px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+                {t('lead.tag')}
+            </span>
+            <h2 class="text-3xl lg:text-5xl font-playfair font-bold mb-6">
+                {t('lead.title')}
+            </h2>
+            <p class="text-green-50 text-xl mb-8 leading-relaxed">
+                {t('lead.desc')}
+            </p>
+
+            <ul class="space-y-4 mb-10 text-green-100">
+                <li class="flex items-start gap-3">
+                    <div class="mt-1 bg-brand-gold/20 p-1 rounded-full">
+                        <i class="ph ph-check text-brand-gold font-bold"></i>
+                    </div>
+                    <div>
+                        <strong class="text-white">{t('lead.list.1.title')}</strong>
+                        <span class="block text-sm">{t('lead.list.1.desc')}</span>
+                    </div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <div class="mt-1 bg-brand-gold/20 p-1 rounded-full">
+                        <i class="ph ph-check text-brand-gold font-bold"></i>
+                    </div>
+                    <div>
+                        <strong class="text-white">{t('lead.list.2.title')}</strong>
+                        <span class="block text-sm">{t('lead.list.2.desc')}</span>
+                    </div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <div class="mt-1 bg-brand-gold/20 p-1 rounded-full">
+                        <i class="ph ph-check text-brand-gold font-bold"></i>
+                    </div>
+                    <div>
+                        <strong class="text-white">{t('lead.list.3.title')}</strong>
+                        <span class="block text-sm">{t('lead.list.3.desc')}</span>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 flex flex-col sm:flex-row items-center gap-6">
+                <div class="flex-1 text-center sm:text-left">
+                    <p class="text-sm text-green-100 mb-1 opacity-80">{t('lead.cta_label')}</p>
+                    <p class="font-bold text-white">{t('lead.cta_sub')}</p>
+                </div>
+                <a href={waLink}
+                    target="_blank"
+                    class="w-full sm:w-auto bg-brand-accent text-white font-bold px-8 py-4 rounded-xl flex items-center justify-center gap-3 hover:bg-yellow-700 transition shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                    <i class="ph ph-whatsapp-logo text-2xl"></i>
+                    {t('lead.cta_btn')}
+                </a>
+            </div>
+            
+            <p class="text-[10px] text-green-300 mt-4 flex items-center gap-2 justify-center lg:justify-start">
+                <i class="ph ph-shield-check"></i> {t('lead.disclaimer')}
+            </p>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,40 @@
+---
+import { aiTranslations } from '../../i18n/ai';
+
+interface Props {
+    lang: 'pt' | 'en' | 'es';
+}
+
+const { lang } = Astro.props;
+const t = (key: keyof typeof aiTranslations['pt']) => aiTranslations[lang][key];
+
+const faqs = [
+    { q: t('faq.1.q'), a: t('faq.1.a') },
+    { q: t('faq.2.q'), a: t('faq.2.a') },
+    { q: t('faq.3.q'), a: t('faq.3.a') },
+    { q: t('faq.4.q'), a: t('faq.4.a') },
+    { q: t('faq.5.q'), a: t('faq.5.a') },
+];
+---
+
+<section id="faq" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-4xl">
+        <h2 class="text-3xl lg:text-4xl font-playfair font-bold text-center mb-12 text-gray-900">
+            {t('faq.title')}
+        </h2>
+        <div class="space-y-4">
+            {faqs.map((faq, index) => (
+                <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none"
+                        onclick={`document.getElementById('faq-ans-${index}').classList.toggle('hidden'); document.getElementById('faq-icon-${index}').classList.toggle('rotate-180')`}>
+                        <span class="font-bold text-gray-800 text-lg">{faq.q}</span>
+                        <i id={`faq-icon-${index}`} class="ph ph-caret-down text-brand-green transition-transform duration-300"></i>
+                    </button>
+                    <div id={`faq-ans-${index}`} class="hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50">
+                        {faq.a}
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>

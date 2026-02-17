@@ -1,0 +1,60 @@
+---
+import { aiTranslations } from '../../i18n/ai';
+
+interface Props {
+    lang: 'pt' | 'en' | 'es';
+}
+
+const { lang } = Astro.props;
+const t = (key: keyof typeof aiTranslations['pt']) => aiTranslations[lang][key];
+
+const cards = [
+    {
+        icon: 'ph-battery-warning',
+        color: 'text-red-600 bg-red-100',
+        title: t('pain.1.title'),
+        desc: t('pain.1.desc')
+    },
+    {
+        icon: 'ph-fire',
+        color: 'text-orange-600 bg-orange-100',
+        title: t('pain.2.title'),
+        desc: t('pain.2.desc')
+    },
+    {
+        icon: 'ph-question',
+        color: 'text-blue-600 bg-blue-100',
+        title: t('pain.3.title'),
+        desc: t('pain.3.desc')
+    },
+    {
+        icon: 'ph-heart-break',
+        color: 'text-purple-600 bg-purple-100',
+        title: t('pain.4.title'),
+        desc: t('pain.4.desc')
+    }
+];
+---
+
+<section class="bg-gray-50 py-20">
+    <div class="container mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
+                {t('pain.title')}
+            </h2>
+            <p class="text-gray-600 text-lg">{t('pain.subtitle')}</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {cards.map(card => (
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition text-center">
+                    <div class={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl ${card.color}`}>
+                        <i class={`ph ${card.icon}`}></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">{card.title}</h3>
+                    <p class="text-gray-500 text-sm">{card.desc}</p>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>

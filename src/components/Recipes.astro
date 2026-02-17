@@ -1,0 +1,61 @@
+---
+import { useTranslations } from '../i18n/utils';
+import { content } from '../i18n/content';
+
+interface Props {
+    lang: 'pt' | 'en' | 'es';
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const { recipes } = content[lang];
+---
+
+<section id="recipes" class="py-20 bg-secondary/30">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <span class="text-primary font-semibold tracking-wider uppercase">{t('recipes.title')}</span>
+                <h2 class="text-4xl md:text-5xl font-heading font-bold text-dark mt-2">
+                    {t('recipes.subtitle')}
+                </h2>
+            </div>
+            <!-- <a href="#" class="hidden md:flex items-center gap-2 text-primary font-bold hover:text-accent transition-colors">
+                {t('recipes.view_all')}
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a> -->
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            {recipes.map((recipe) => (
+                <a href={
+                    lang === 'pt' ? `/pt/receitas/${recipe.slug}` :
+                    lang === 'en' ? `/en/recipes/${recipe.slug}` :
+                    `/es/recetas/${recipe.slug}`
+                } class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all group cursor-pointer block">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src={recipe.image} alt={recipe.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            {recipe.tags.map(tag => (
+                                <span class="bg-white/90 backdrop-blur-sm text-dark text-xs font-bold px-3 py-1 rounded-full">
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-heading font-bold text-dark mb-2 group-hover:text-primary transition-colors">{recipe.title}</h3>
+                        <p class="text-dark/60 text-sm">{t('recipes.click_more')}</p>
+                    </div>
+                </a>
+            ))}
+        </div>
+        
+        <div class="mt-8 text-center md:hidden">
+            <a href="#" class="inline-flex items-center gap-2 text-primary font-bold hover:text-accent transition-colors">
+                {t('recipes.view_all')}
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+        </div>
+    </div>
+</section>

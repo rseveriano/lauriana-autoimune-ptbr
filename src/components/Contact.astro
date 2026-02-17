@@ -1,0 +1,72 @@
+---
+import { useTranslations } from '../i18n/utils';
+
+interface Props {
+    lang: 'pt' | 'en' | 'es';
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const waMessage = t('whatsapp.message');
+const waLink = `https://wa.me/5561995021067?text=${encodeURIComponent(waMessage)}`;
+---
+<section id="contact" class="py-20 bg-primary text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div>
+                    <span class="text-white/80 font-semibold tracking-wider uppercase">{t('contact.title')}</span>
+                    <h2 class="text-4xl md:text-5xl font-heading font-bold mt-2 mb-6">
+                        {t('contact.subtitle')}
+                    </h2>
+                    <p class="text-white/90 text-lg max-w-md">
+                        {t('contact.desc')}
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-sm text-white/60">{t('contact.whatsapp')}</p>
+                            <a href={waLink} target="_blank" class="text-xl font-bold hover:text-secondary transition-colors">+55 61 9 9502-1067</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-sm text-white/60">{t('contact.email')}</p>
+                            <a href="mailto:info@atypicalbrains.win" class="text-xl font-bold hover:text-secondary transition-colors">info@atypicalbrains.win</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-sm text-white/60">{t('contact.instagram')}</p>
+                            <a href="https://instagram.com/lauriananutri" target="_blank" class="text-xl font-bold hover:text-secondary transition-colors">@lauriananutri</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden md:block relative h-full min-h-[400px]">
+                <!-- Decorative elements instead of map -->
+                 <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="w-64 h-64 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
+                 </div>
+                 <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2053&auto=format&fit=crop" alt="Healthy Food" class="relative rounded-3xl shadow-2xl transition-transform duration-500 object-cover w-full h-full" />
+            </div>
+        </div>
+    </div>
+</section>

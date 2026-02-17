@@ -1,0 +1,178 @@
+---
+import { useTranslations, getRouteFromUrl } from '../i18n/utils';
+import { languages } from '../i18n/ui';
+
+interface Props {
+    lang: 'pt' | 'en' | 'es';
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const links = [
+    { href: '#about', label: t('nav.about') },
+    { href: '#services', label: t('nav.services') },
+    { href: '#recipes', label: t('nav.recipes') },
+    { href: '#blog', label: t('nav.blog') },
+    { href: '#testimonials', label: t('nav.testimonials') },
+];
+
+const waMessage = t('whatsapp.message');
+const waLink = `https://wa.me/5561995021067?text=${encodeURIComponent(waMessage)}`;
+---
+
+<header class="fixed w-full top-0 z-50 bg-secondary/80 backdrop-blur-md border-b border-primary/10">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href={lang === 'pt' ? '/' : `/${lang}`} class="text-2xl font-heading font-bold text-dark flex items-center gap-2 z-50">
+            <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white relative overflow-hidden group">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-8 h-8 fill-none stroke-white stroke-[6] group-hover:scale-110 transition-transform duration-500">
+                    <!-- Vertical line with molecule nodes -->
+                    <line x1="30" y1="20" x2="30" y2="80" stroke-linecap="round" />
+                    <circle cx="30" cy="20" r="6" fill="white" stroke="none" />
+                    <circle cx="30" cy="50" r="6" fill="white" stroke="none" />
+                    <circle cx="30" cy="80" r="6" fill="white" stroke="none" />
+                    
+                    <!-- Horizontal line with molecule nodes -->
+                    <line x1="30" y1="80" x2="80" y2="80" stroke-linecap="round" />
+                    <circle cx="55" cy="80" r="6" fill="white" stroke="none" />
+                    <circle cx="80" cy="80" r="6" fill="white" stroke="none" />
+                    
+                    <!-- Connecting bonds/details -->
+                    <path d="M30 50 L50 30" stroke-width="3" opacity="0.5" />
+                    <circle cx="50" cy="30" r="4" fill="white" stroke="none" opacity="0.8" />
+                </svg>
+            </div>
+            <span>Lauriana<span class="text-primary">Silva</span></span>
+        </a>
+        
+        <nav class="hidden md:flex items-center gap-8 font-medium text-dark/80">
+            {links.map(link => (
+                <a href={link.href} class="hover:text-primary transition-colors">{link.label}</a>
+            ))}
+        </nav>
+
+        <div class="flex items-center gap-4">
+			<!--
+            <div class="hidden md:flex items-center gap-2 text-sm font-medium text-dark/60">
+                <a href="/" class={`hover:text-primary transition-colors ${lang === 'pt' ? 'text-primary font-bold' : ''}`}>PT</a>
+                <span>|</span>
+                <a href="/en" class={`hover:text-primary transition-colors ${lang === 'en' ? 'text-primary font-bold' : ''}`}>EN</a>
+                <span>|</span>
+                <a href="/es" class={`hover:text-primary transition-colors ${lang === 'es' ? 'text-primary font-bold' : ''}`}>ES</a>
+            </div>
+			-->
+            <div class="hidden md:flex items-center gap-2 text-sm font-medium text-dark/60">
+                {Object.entries(languages).map(([langCode, label], index) => {
+                    const isLast = index === Object.entries(languages).length - 1;
+                    const isActive = lang === langCode;
+                    return (
+                        <>
+                            <a 
+                                href={langCode === 'pt' ? getRouteFromUrl(Astro.url) || '/' : `/${langCode}${getRouteFromUrl(Astro.url) || ''}`}
+                                class={`flex items-center gap-1 hover:text-primary transition-colors ${isActive ? 'text-primary font-bold' : ''}`}
+                                aria-label={`Mudar para ${label}`}
+                            >
+                                <img 
+                                    src={langCode === 'pt' ? "/flag-brazil.svg" : langCode === 'en' ? "/flag-usa.svg" : "/flag-spain.svg"} 
+                                    alt={`Bandeira ${label}`} 
+                                    class="w-5 h-auto rounded shadow-md" 
+                                /> 
+                                {langCode.toUpperCase()}
+                            </a>
+                            {!isLast && <span>|</span>}
+                        </>
+                    );
+                })}
+            </div>
+
+            <a href="https://instagram.com/lauriananutri" target="_blank" class="text-dark/60 hover:text-accent transition-colors" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href={waLink} target="_blank" class="sm:hidden text-dark/60 hover:text-primary transition-colors" aria-label="WhatsApp">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            </a>
+            <a href={waLink} target="_blank" class="hidden sm:flex bg-primary text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-primary/90 transition-colors">
+                {t('nav.contact_me')}
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-dark p-2" aria-label="Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[100] bg-white transform translate-x-full transition-transform duration-300 md:hidden flex flex-col h-screen w-screen">
+        <!-- Menu Header -->
+        <div class="flex justify-between items-center p-6 border-b border-gray-100">
+            <span class="text-2xl font-heading font-bold text-dark">Menu</span>
+            <button id="close-menu-btn" class="p-2 text-dark hover:text-primary hover:bg-gray-50 rounded-full transition-all" aria-label="Close Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 18 12"/></svg>
+            </button>
+        </div>
+        
+        <!-- Menu Links -->
+        <nav class="flex flex-col p-6 gap-2 overflow-y-auto flex-grow">
+            <a href={lang === 'pt' ? '/' : `/${lang}`} class="mobile-link text-xl font-medium text-dark py-4 border-b border-gray-50 hover:text-primary hover:pl-2 transition-all">
+                {t('nav.home')}
+            </a>
+            {links.map(link => (
+                <a href={link.href} class="mobile-link text-xl font-medium text-dark py-4 border-b border-gray-50 hover:text-primary hover:pl-2 transition-all">
+                    {link.label}
+                </a>
+            ))}
+        </nav>
+
+        <!-- Menu Footer (Languages & Social) -->
+        <div class="p-8 bg-gray-50 border-t border-gray-100">
+            <div class="flex flex-col gap-6">
+                <div class="flex justify-center gap-6">
+                    {Object.entries(languages).map(([langCode]) => {
+                        const isActive = lang === langCode;
+                        return (
+                            <a 
+                                href={langCode === 'pt' ? getRouteFromUrl(Astro.url) || '/' : `/${langCode}${getRouteFromUrl(Astro.url) || ''}`}
+                                class={`text-lg font-bold px-4 py-2 rounded-lg transition-colors ${isActive ? 'bg-primary text-white shadow-md' : 'text-dark/60 hover:bg-white'}`}
+                            >
+                                {langCode.toUpperCase()}
+                            </a>
+                        );
+                    })}
+                </div>
+                
+                <div class="flex justify-center gap-6 text-dark/60">
+                    <a href="https://instagram.com/lauriananutri" target="_blank" class="hover:text-accent transition-colors p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    </a>
+                    <a href={waLink} target="_blank" class="hover:text-primary transition-colors p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script is:inline>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const closeBtn = document.getElementById('close-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function toggleMenu() {
+                if (mobileMenu) {
+                    mobileMenu.classList.toggle('translate-x-full');
+                    document.body.classList.toggle('overflow-hidden');
+                }
+            }
+
+            if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+            if (closeBtn) closeBtn.addEventListener('click', toggleMenu);
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', toggleMenu);
+            });
+        });
+    </script>
+</header>

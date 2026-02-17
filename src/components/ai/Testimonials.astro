@@ -1,0 +1,58 @@
+---
+import { aiTranslations } from '../../i18n/ai';
+
+interface Props {
+    lang: 'pt' | 'en' | 'es';
+}
+
+const { lang } = Astro.props;
+const t = (key: keyof typeof aiTranslations['pt']) => aiTranslations[lang][key];
+
+const testimonials = [
+    {
+        text: t('testimonials.1.text'),
+        author: t('testimonials.1.author'),
+        condition: t('testimonials.1.condition'),
+        initials: 'MS'
+    },
+    {
+        text: t('testimonials.2.text'),
+        author: t('testimonials.2.author'),
+        condition: t('testimonials.2.condition'),
+        initials: 'JP'
+    },
+    {
+        text: t('testimonials.3.text'),
+        author: t('testimonials.3.author'),
+        condition: t('testimonials.3.condition'),
+        initials: 'AC'
+    }
+];
+---
+
+<section class="py-20 bg-brand-light">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 text-center mb-12">
+            {t('testimonials.title.prefix')} <span class="text-brand-green">{t('testimonials.title.highlight')}</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map(testimonial => (
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition relative">
+                    <i class="ph ph-quotes text-4xl text-brand-green/20 absolute top-6 left-6"></i>
+                    <p class="text-gray-600 italic mb-6 relative z-10 pt-6">
+                        {testimonial.text}
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-user-light text-brand-green rounded-full flex items-center justify-center font-bold bg-gray-200">
+                            {testimonial.initials}
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">{testimonial.author}</p>
+                            <p class="text-xs text-gray-500">{testimonial.condition}</p>
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
