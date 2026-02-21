@@ -1,0 +1,64 @@
+---
+interface Props {
+	title: string;
+    description: string;
+    lang: 'pt' | 'en' | 'es';
+}
+
+const { title, description, lang } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/logo-top-tea.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+
+        {/* Hreflang for SEO */}
+        <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+        <link rel="alternate" hreflang="pt" href={new URL('/ai', Astro.site)} />
+        <link rel="alternate" hreflang="en" href={new URL('/ai/en', Astro.site)} />
+        <link rel="alternate" hreflang="es" href={new URL('/ai/es', Astro.site)} />
+        <link rel="alternate" hreflang="x-default" href={new URL('/ai', Astro.site)} />
+
+        <!-- OpenGraph / Social Media -->
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="https://atypicalbrains.win/ogimage.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content={lang === 'pt' ? 'pt_BR' : lang === 'es' ? 'es_ES' : 'en_US'} />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <!-- Phosphor Icons -->
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+        <style is:global>
+            /* Custom Scrollbar for a premium feel */
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+            ::-webkit-scrollbar-track {
+                background: #F8FAF9;
+            }
+            ::-webkit-scrollbar-thumb {
+                background: #3B755F;
+                border-radius: 5px;
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background: #2C5E4B;
+            }
+        </style>
+	</head>
+	<body class="font-lato text-brand-dark bg-brand-light antialiased">
+		<slot />
+	</body>
+</html>

@@ -1,0 +1,75 @@
+---
+import { aiTranslations } from '../../i18n/ai';
+
+interface Props {
+    lang: 'pt' | 'en' | 'es';
+}
+
+const { lang } = Astro.props;
+const t = (key: keyof typeof aiTranslations['pt']) => aiTranslations[lang][key];
+
+const bioItems = [
+    {
+        icon: 'ph-brain',
+        title: t('bio.1.title'),
+        desc: t('bio.1.desc')
+    },
+    {
+        icon: 'ph-flask',
+        title: t('bio.2.title'),
+        desc: t('bio.2.desc')
+    },
+    {
+        icon: 'ph-microscope',
+        title: t('bio.3.title'),
+        desc: t('bio.3.desc')
+    },
+    {
+        icon: 'ph-dna',
+        title: t('bio.4.title'),
+        desc: t('bio.4.desc')
+    }
+];
+---
+
+<section id="sobre" class="py-20 bg-white">
+    <div class="container mx-auto px-6 max-w-5xl">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="w-full md:w-1/3">
+                <img src="/lauriana.avif" alt="Foto da Dra. Lauriana"
+                    class="w-full aspect-square object-cover rounded-full shadow-2xl border-4 border-white"
+                    loading="lazy" width="400" height="400">
+            </div>
+            <div class="w-full md:w-2/3">
+                <h2 class="text-3xl font-playfair font-bold text-gray-900 mb-4">{t('bio.name')}</h2>
+                <h3 class="text-brand-green font-bold mb-6">{t('bio.title')}</h3>
+                <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
+                    {bioItems.map(item => (
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-brand-green/10 rounded-lg flex items-center justify-center">
+                                <i class={`ph ${item.icon} text-brand-green text-xl font-bold`}></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm mb-2">{item.title}</h4>
+                                <ul class="text-xs text-gray-600 space-y-1">
+                                    {item.desc.split('\n').map(line => (
+                                        <li>{line}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                <div class="mt-10 flex items-center gap-4">
+                    <img src="/ai/crn-1-logo.png" alt="Selo CRN"
+                        class="h-16 opacity-70 grayscale hover:grayscale-0 transition">
+                    <div class="border-l border-gray-200 pl-4 text-left">
+                        <p class="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-bold">{t('bio.crn_label')}</p>
+                        <p class="text-xl font-playfair font-bold text-brand-green">CRN1 23987/P</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

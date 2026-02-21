@@ -1,0 +1,138 @@
+---
+import { aiTranslations } from '../../i18n/ai';
+
+interface Props {
+    lang: 'pt' | 'en' | 'es';
+}
+
+const { lang } = Astro.props;
+const t = (key: keyof typeof aiTranslations['pt']) => aiTranslations[lang][key];
+
+const waMessage = t('whatsapp.message');
+const waLink = `https://wa.me/5561995021067?text=${encodeURIComponent(waMessage)}`;
+---
+
+<!-- THE OFFER (Stacking Value) -->
+<section id="treatment" class="py-20 bg-brand-green text-white relative overflow-hidden">
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl lg:text-4xl font-playfair font-bold mb-4">{t('offer.title')}</h2>
+            <p class="text-green-100 text-lg max-w-2xl mx-auto">{t('offer.subtitle')}</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <!-- Item 1 -->
+            <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-lg hover:bg-white/20 transition">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="font-bold text-xl">{t('offer.1.title')}</h3>
+                    <i class="ph ph-magnifying-glass text-2xl text-green-200"></i>
+                </div>
+                <p class="text-sm text-green-100 mb-4 h-12">{t('offer.1.desc')}</p>
+                <div class="border-t border-white/20 pt-3 text-right">
+                    <span class="block text-xs text-green-200">{t('offer.1.value')}</span>
+                    <span class="font-mono text-lg decoration-wavy">R$ 1.400,00</span>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-lg hover:bg-white/20 transition">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="font-bold text-xl">{t('offer.2.title')}</h3>
+                    <i class="ph ph-chart-line-up text-2xl text-green-200"></i>
+                </div>
+                <p class="text-sm text-green-100 mb-4 h-12">{t('offer.2.desc')}</p>
+                <div class="border-t border-white/20 pt-3 text-right">
+                    <span class="block text-xs text-green-200">{t('offer.2.value')}</span>
+                    <span class="font-mono text-lg">R$ 700,00</span>
+                </div>
+            </div>
+
+            <!-- Item 3 (BONUS) -->
+            <div class="bg-white text-brand-dark p-6 rounded-lg shadow-xl transform border-2 border-brand-gold relative mt-2">
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-gold text-white px-4 py-1 rounded-full text-xs font-bold tracking-wider uppercase">
+                    {t('offer.3.tag')}
+                </div>
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="font-bold text-xl">{t('offer.3.title')}</h3>
+                    <i class="ph ph-whatsapp-logo text-2xl text-green-600"></i>
+                </div>
+                <p class="text-sm text-gray-600 mb-4 h-12">{t('offer.3.desc')}</p>
+                <div class="border-t border-gray-200 pt-3 text-right">
+                    <span class="block text-xs text-gray-500">{t('offer.3.value_label')}</span>
+                    <span class="font-bold text-xl text-brand-green">{t('offer.3.value_text')}</span>
+                </div>
+            </div>
+
+            <!-- Item 4 (BONUS) -->
+            <div class="bg-white text-brand-dark p-6 rounded-lg shadow-xl transform border-2 border-brand-gold relative mt-2 md:mt-0">
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-gold text-white px-4 py-1 rounded-full text-xs font-bold tracking-wider uppercase">
+                    {t('offer.4.tag')}
+                </div>
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="font-bold text-xl">{t('offer.4.title')}</h3>
+                    <i class="ph ph-flower-lotus text-2xl text-green-600"></i>
+                </div>
+                <p class="text-sm text-gray-600 mb-4 h-12">{t('offer.4.desc')}</p>
+                <div class="border-t border-gray-200 pt-3 text-right">
+                    <span class="block text-xs text-gray-500">{t('offer.4.value_label')}</span>
+                    <span class="font-bold text-xl text-brand-green">{t('offer.4.value_text')}</span>
+                </div>
+            </div>
+
+            <!-- Item 5 (BONUS) -->
+            <div class="bg-white text-brand-dark p-6 rounded-lg shadow-xl transform border-2 border-brand-gold relative mt-2 md:mt-0 md:col-span-2 lg:col-span-1">
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-gold text-white px-4 py-1 rounded-full text-xs font-bold tracking-wider uppercase">
+                    {t('offer.5.tag')}
+                </div>
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="font-bold text-xl">{t('offer.5.title')}</h3>
+                    <i class="ph ph-flask text-2xl text-green-600"></i>
+                </div>
+                <p class="text-sm text-gray-600 mb-4 h-12">{t('offer.5.desc')}</p>
+                <div class="border-t border-gray-200 pt-3 text-right">
+                    <span class="block text-xs text-gray-500">{t('offer.5.value_label')}</span>
+                    <span class="font-bold text-xl text-brand-green">{t('offer.5.value_text')}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PRICE / ANCHORING -->
+<section id="oferta" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row">
+            <!-- Left Column (Summary) -->
+            <div class="p-10 lg:w-1/2 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-gray-100">
+                <h3 class="text-2xl font-playfair font-bold text-gray-800 mb-6">{t('price.summary.title')}</h3>
+                <ul class="space-y-3 text-gray-600 mb-8">
+                    <li class="flex justify-between"><span>{t('price.summary.1')}</span> <span class="font-bold">{t('price.summary.1.val')}</span></li>
+                    <li class="flex justify-between"><span>{t('price.summary.2')}</span> <span class="font-bold">{t('price.summary.2.val')}</span></li>
+                    <li class="flex justify-between text-green-600"><span>{t('price.summary.3')}</span> <span class="font-bold">{t('price.summary.3.val')}</span></li>
+                    <li class="flex justify-between text-green-600"><span>{t('price.summary.4')}</span> <span class="font-bold">{t('price.summary.4.val')}</span></li>
+                    <li class="flex justify-between text-green-600"><span>{t('price.summary.5')}</span> <span class="font-bold">{t('price.summary.5.val')}</span></li>
+                </ul>
+                <div class="pt-6 border-t border-gray-200">
+                    <p class="text-sm text-gray-500 uppercase tracking-wide">{t('price.total_label')}</p>
+                    <p class="text-2xl font-bold text-gray-400 line-through decoration-red-500 decoration-2">R$ 6.300,00</p>
+                </div>
+            </div>
+
+            <!-- Right Column (Final Price) -->
+            <div class="p-10 lg:w-1/2 bg-brand-green/5 flex flex-col justify-center items-center text-center">
+                <span class="bg-brand-green/10 text-brand-green px-4 py-1 rounded-full text-xs font-bold mb-4 uppercase tracking-wider">{t('price.tag')}</span>
+                <p class="text-gray-600 text-sm mb-2">{t('price.investment_label')}</p>
+                <div class="text-5xl font-playfair font-bold text-brand-green mb-2">R$ 1.900</div>
+                <p class="text-gray-500 text-sm mb-8">{t('price.savings')} <strong>{t('price.savings.val')}</strong></p>
+
+                <a href={waLink}
+                    target="_blank"
+                    class="w-full bg-brand-accent text-white py-4 rounded-lg font-bold text-lg shadow-lg hover:bg-yellow-700 transition hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center">
+                    {t('price.cta')} <i class="ph ph-arrow-right ml-2"></i>
+                </a>
+
+                <p class="mt-4 text-xs text-gray-500 text-center">{t('price.installments')}</p>
+            </div>
+        </div>
+    </div>
+</section>

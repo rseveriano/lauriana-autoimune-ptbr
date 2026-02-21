@@ -1,0 +1,158 @@
+---
+import { useTranslations, getRouteFromUrl } from '../i18n/utils';
+import { languages } from '../i18n/ui';
+
+interface Props {
+    lang: 'pt' | 'en' | 'es';
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const links = [
+    { href: '#about', label: t('nav.about') },
+    { href: '#services', label: t('nav.services') },
+    { href: '#recipes', label: t('nav.recipes') },
+    { href: '#blog', label: t('nav.blog') },
+    { href: '#testimonials', label: t('nav.testimonials') },
+];
+
+const waMessage = t('whatsapp.message');
+const waLink = `https://wa.me/5561995021067?text=${encodeURIComponent(waMessage)}`;
+---
+
+<header class="fixed w-full top-0 z-50 bg-secondary/80 backdrop-blur-md border-b border-primary/10 transition-all duration-300" id="header">
+    <div class="container mx-auto px-4 py-4 relative">
+        <div class="flex justify-between items-center">
+            <a href={lang === 'pt' ? '/' : `/${lang}`} class="text-2xl font-heading font-bold text-dark flex items-center gap-2 z-50">
+                <img src="/logo-top-tea.svg" alt="Logo Top TEA" class="h-12 w-auto object-contain" />
+                <span>Lauriana<span class="text-primary">Silva</span></span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 font-medium text-dark/80">
+                {links.map(link => (
+                    <a href={link.href} class="hover:text-primary transition-colors">{link.label}</a>
+                ))}
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <div class="hidden md:flex items-center gap-2 text-sm font-medium text-dark/60">
+                    {Object.entries(languages).map(([langCode, label], index) => {
+                        const isLast = index === Object.entries(languages).length - 1;
+                        const isActive = lang === langCode;
+                        return (
+                            <>
+                                <a 
+                                    href={langCode === 'pt' ? getRouteFromUrl(Astro.url) || '/' : `/${langCode}${getRouteFromUrl(Astro.url) || ''}`}
+                                    class={`flex items-center gap-1 hover:text-primary transition-colors ${isActive ? 'text-primary font-bold' : ''}`}
+                                    aria-label={`Mudar para ${label}`}
+                                >
+                                    <img 
+                                        src={langCode === 'pt' ? "/flag-brazil.svg" : langCode === 'en' ? "/flag-usa.svg" : "/flag-spain.svg"} 
+                                        alt={`Bandeira ${label}`} 
+                                        class="w-5 h-auto rounded shadow-md" 
+                                    /> 
+                                    {langCode.toUpperCase()}
+                                </a>
+                                {!isLast && <span>|</span>}
+                            </>
+                        );
+                    })}
+                </div>
+
+                <a href="https://instagram.com/lauriananutri" target="_blank" class="hidden md:block text-dark/60 hover:text-accent transition-colors" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </a>
+        
+                <a href={waLink} target="_blank" class="hidden sm:flex bg-primary text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-primary/90 transition-colors">
+                    {t('nav.contact_me')}
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none">
+                    <i class="ph ph-list text-3xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu"
+            class="md:hidden absolute top-full left-4 right-4 bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 space-y-4 transform scale-95 origin-top transition-all duration-300 opacity-0 pointer-events-none data-[open=true]:opacity-100 data-[open=true]:pointer-events-auto data-[open=true]:scale-100 mt-2">
+            
+
+            {links.map(link => (
+                <a href={link.href} class="block text-gray-600 hover:text-primary font-semibold py-3 border-b border-gray-50">{link.label}</a>
+            ))}
+
+            <div class="flex items-center justify-between py-2 border-b border-gray-50">
+                 <span class="text-gray-500 text-sm font-medium">{t('nav.language')}:</span>
+                 <div class="flex items-center gap-4">
+                    {Object.entries(languages).map(([langCode]) => {
+                         const isActive = lang === langCode;
+                         return (
+                            <a href={langCode === 'pt' ? getRouteFromUrl(Astro.url) || '/' : `/${langCode}${getRouteFromUrl(Astro.url) || ''}`} 
+                               class={isActive ? 'text-primary font-bold' : 'text-gray-400 hover:text-primary transition'}>
+                               {langCode.toUpperCase()}
+                            </a>
+                         );
+                    })}
+                 </div>
+            </div>
+
+            <div class="flex items-center justify-between py-2">
+                <span class="text-gray-500 text-sm font-medium">Social:</span>
+                <div class="flex gap-4">
+                    <a href={waLink} target="_blank" class="text-primary hover:text-accent transition-colors">
+                        <i class="ph ph-whatsapp-logo text-2xl"></i>
+                    </a>
+                    <a href="https://instagram.com/lauriananutri" target="_blank" class="text-primary hover:text-accent transition-colors">
+                        <i class="ph ph-instagram-logo text-2xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@lauriananutricionista" target="_blank" class="text-primary hover:text-accent transition-colors">
+                        <i class="ph ph-youtube-logo text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<script>
+    const initMobileMenu = () => {
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                const isOpen = menu.getAttribute('data-open') === 'true';
+                menu.setAttribute('data-open', (!isOpen).toString());
+                
+                const icon = btn.querySelector('i');
+                if (icon) {
+                    if (!isOpen) {
+                        icon.classList.remove('ph-list');
+                        icon.classList.add('ph-x');
+                    } else {
+                        icon.classList.remove('ph-x');
+                        icon.classList.add('ph-list');
+                    }
+                }
+            });
+
+            const links = menu.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.setAttribute('data-open', 'false');
+                    const icon = btn.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('ph-x');
+                        icon.classList.add('ph-list');
+                    }
+                });
+            });
+        }
+    };
+
+    document.addEventListener('astro:page-load', initMobileMenu);
+</script>

@@ -1,0 +1,115 @@
+---
+import { aiTranslations } from '../../i18n/ai';
+
+interface Props {
+    lang: 'pt' | 'en' | 'es';
+}
+
+const { lang } = Astro.props;
+const t = (key: keyof typeof aiTranslations['pt']) => aiTranslations[lang][key];
+
+const navLinks = [
+    { href: '#metodo', label: t('nav.method') },
+    { href: '#treatment', label: t('nav.treatment') },
+    { href: '#sobre', label: t('nav.about') },
+];
+---
+
+<header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300" id="header">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+            <!-- Logo -->
+            <a href={lang === 'pt' ? '/' : `/${lang}`} class="text-2xl font-heading font-bold text-dark flex items-center gap-2 z-50">
+                <img src="/logo-top-tea.svg" alt="Logo Top TEA" class="h-12 w-auto object-contain" />
+                <span>Lauriana<span class="text-primary">Silva</span></span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8">
+                {navLinks.map(link => (
+                    <a href={link.href} class="text-gray-600 hover:text-brand-green transition font-medium">{link.label}</a>
+                ))}
+
+                <!-- Language Selector -->
+                <div class="flex items-center space-x-2 border-l pl-4 border-gray-300 ml-4">
+                    <a href="/ai/" class={`text-sm ${lang === 'pt' ? 'text-brand-green font-bold' : 'text-gray-400 hover:text-brand-green transition'}`}>PT</a>
+                    <span class="text-gray-300">|</span>
+                    <a href="/ai/en" class={`text-sm ${lang === 'en' ? 'text-brand-green font-bold' : 'text-gray-400 hover:text-brand-green transition'}`}>EN</a>
+                    <span class="text-gray-300">|</span>
+                    <a href="/ai/es" class={`text-sm ${lang === 'es' ? 'text-brand-green font-bold' : 'text-gray-400 hover:text-brand-green transition'}`}>ES</a>
+                </div>
+
+                <a href="#oferta"
+                    class="bg-brand-green text-white px-6 py-2 rounded-full font-bold hover:bg-green-800 transition shadow-lg transform hover:scale-105 text-sm">
+                    {t('nav.schedule')}
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-brand-green focus:outline-none">
+                <i class="ph ph-list text-3xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu"
+            class="md:hidden absolute top-full left-6 right-6 bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 space-y-4 transform scale-95 origin-top transition-all duration-300 opacity-0 pointer-events-none data-[open=true]:opacity-100 data-[open=true]:pointer-events-auto data-[open=true]:scale-100">
+            <a href={lang === 'pt' ? '/' : `/${lang}`} class="block text-brand-green font-bold py-3 border-b border-gray-50 flex items-center">
+                <i class="ph ph-house mr-2 text-xl"></i> {t('nav.home')}
+            </a>
+            {navLinks.map(link => (
+                <a href={link.href} class="block text-gray-600 hover:text-brand-green font-semibold py-3 border-b border-gray-50">{link.label}</a>
+            ))}
+
+            <div class="flex items-center justify-between py-2">
+                <span class="text-gray-500 text-sm font-medium">{t('nav.language')}:</span>
+                <div class="flex items-center gap-4">
+                    <a href="/ai/" class={lang === 'pt' ? 'text-brand-green font-bold' : 'text-gray-400 hover:text-brand-green transition'}>PT</a>
+                    <a href="/ai/en" class={lang === 'en' ? 'text-brand-green font-bold' : 'text-gray-400 hover:text-brand-green transition'}>EN</a>
+                    <a href="/ai/es" class={lang === 'es' ? 'text-brand-green font-bold' : 'text-gray-400 hover:text-brand-green transition'}>ES</a>
+                </div>
+            </div>
+
+            <a href="#oferta"
+                class="block w-full text-center bg-brand-green text-white px-6 py-4 rounded-xl font-bold hover:bg-green-800 transition shadow-lg">
+                {t('nav.schedule')}
+            </a>
+        </div>
+    </div>
+</header>
+
+<script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    if (btn && menu) {
+        btn.addEventListener('click', () => {
+            const isOpen = menu.getAttribute('data-open') === 'true';
+            menu.setAttribute('data-open', (!isOpen).toString());
+            
+            const icon = btn.querySelector('i');
+            if (icon) {
+                if (!isOpen) { // If we are opening it
+                    icon.classList.remove('ph-list');
+                    icon.classList.add('ph-x');
+                } else {
+                    icon.classList.remove('ph-x');
+                    icon.classList.add('ph-list');
+                }
+            }
+        });
+
+        // Close menu when clicking a link
+        const links = menu.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.setAttribute('data-open', 'false');
+                const icon = btn.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('ph-x');
+                    icon.classList.add('ph-list');
+                }
+            });
+        });
+    }
+</script>

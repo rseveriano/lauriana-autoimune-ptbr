@@ -1,0 +1,45 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { content } from '../../../i18n/content';
+
+export function getStaticPaths() {
+  return content.en.posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const lang = 'en';
+---
+
+<Layout title={`${post.title} | Lauriana Nutritionist`} lang={lang}>
+    <Header lang={lang} />
+    <main class="pt-32 pb-20">
+        <article class="container mx-auto px-4 max-w-3xl">
+            <a href="/en#blog" class="inline-flex items-center gap-2 text-primary font-bold hover:text-accent transition-colors mb-8">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+                Back
+            </a>
+            
+            <div class="rounded-3xl overflow-hidden mb-8 shadow-xl">
+                <img src={post.image} alt={post.title} class="w-full h-[400px] object-cover" />
+            </div>
+
+            <div class="flex items-center gap-4 text-sm text-dark/60 mb-6">
+                <span>{post.date}</span>
+                <span class="w-1 h-1 bg-primary rounded-full"></span>
+                <span class="text-primary font-semibold">Scientific Article</span>
+            </div>
+
+            <h1 class="text-4xl md:text-5xl font-heading font-bold text-dark mb-8 leading-tight">
+                {post.title}
+            </h1>
+
+            <div class="prose prose-lg prose-green max-w-none text-dark/80" set:html={post.content}></div>
+        </article>
+    </main>
+    <Footer lang={lang} />
+</Layout>

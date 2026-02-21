@@ -1,0 +1,45 @@
+---
+import { useTranslations } from '../i18n/utils';
+import { content } from '../i18n/content';
+
+interface Props {
+    lang: 'pt' | 'en' | 'es';
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const { testimonials } = content[lang];
+---
+
+<section id="testimonials" class="py-20 bg-white overflow-hidden">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <span class="text-primary font-semibold tracking-wider uppercase">{t('testimonials.title')}</span>
+            <h2 class="text-4xl md:text-5xl font-heading font-bold text-dark mt-2">
+                {t('testimonials.subtitle')}
+            </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            {testimonials.map((item) => (
+                <div class="bg-secondary/20 p-8 rounded-4xl relative">
+                    <div class="absolute -top-6 left-8">
+                        <div class="w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center text-2xl font-serif">
+                            "
+                        </div>
+                    </div>
+                    <p class="text-dark/80 italic mb-6 mt-4 leading-relaxed">
+                        "{item.text}"
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <img src={item.image} alt={item.name} class="w-12 h-12 rounded-full object-cover" />
+                        <div>
+                            <h4 class="font-bold text-dark">{item.name}</h4>
+                            <p class="text-sm text-primary">{item.role}</p>
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>

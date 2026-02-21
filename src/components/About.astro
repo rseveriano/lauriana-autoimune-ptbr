@@ -1,0 +1,50 @@
+---
+import { useTranslations } from '../i18n/utils';
+import { content } from '../i18n/content';
+
+interface Props {
+    lang: 'pt' | 'en' | 'es';
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const { qualifications } = content[lang];
+---
+
+<section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+            <span class="text-primary font-semibold tracking-wider uppercase">{t('about.title')}</span>
+            <h2 class="text-4xl md:text-5xl font-heading font-bold text-dark mt-2 mb-6">
+                {t('about.subtitle')}
+            </h2>
+            <p class="text-xl text-dark/70">
+                CRN1 23987P
+            </p>
+            <p class="mt-6 text-lg text-dark/80 leading-relaxed">
+                {t('about.bio')}
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="relative order-2 md:order-1">
+                <div class="absolute inset-0 bg-primary/10 rounded-3xl transform -rotate-3"></div>
+                <img src="/lauriana.avif" alt="Lauriana Nutricionista" class="relative rounded-3xl shadow-xl w-full h-[600px] object-cover" />
+            </div>
+            
+            <div class="space-y-8 order-1 md:order-2">
+                <h3 class="text-2xl font-heading font-bold text-primary">{t('about.qualifications')}</h3>
+                <ul class="space-y-4">
+                    {qualifications.map((item) => (
+                        <li class="flex items-start gap-3 group">
+                            <div class="mt-1 min-w-[1.5rem] h-6 rounded-full bg-secondary flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                            </div>
+                            <span class="text-dark/80 group-hover:text-dark transition-colors">{item}</span>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
