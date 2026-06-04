@@ -7,10 +7,6 @@ export const onRequest = async (context: EventContext) => {
     const request = context.request;
     const url = new URL(request.url);
 
-    if (url.pathname !== "/") {
-        return context.next();
-    }
-
     const acceptLanguage = request.headers.get("Accept-Language");
 
     let targetLang = "pt";
@@ -25,5 +21,13 @@ export const onRequest = async (context: EventContext) => {
         }
     }
 
-    return Response.redirect(`${url.origin}/${targetLang}/`, 302);
+    if (url.pathname === "/") {
+        return Response.redirect(`${url.origin}/${targetLang}/`, 302);
+    }
+
+    if (url.pathname === "/ai" || url.pathname === "/ai/") {
+        return Response.redirect(`${url.origin}/ai/${targetLang}`, 302);
+    }
+
+    return context.next();
 };
