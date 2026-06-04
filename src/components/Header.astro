@@ -24,7 +24,7 @@ const waLink = `https://wa.me/5561995021067?text=${encodeURIComponent(waMessage)
 <header class="fixed w-full top-0 z-50 bg-secondary/80 backdrop-blur-md border-b border-primary/10 transition-all duration-300" id="header">
     <div class="container mx-auto px-4 py-4 relative">
         <div class="flex justify-between items-center">
-            <a href={lang === 'pt' ? '/' : `/${lang}`} class="text-2xl font-heading font-bold text-dark flex items-center gap-2 z-50">
+            <a href={`/${lang}`} class="text-2xl font-heading font-bold text-dark flex items-center gap-2 z-50">
                 <img src="/logo-top-tea.svg" alt="Logo Top TEA" class="h-12 w-auto object-contain" />
                 <span>Lauriana<span class="text-primary">Silva</span></span>
             </a>
@@ -43,7 +43,7 @@ const waLink = `https://wa.me/5561995021067?text=${encodeURIComponent(waMessage)
                         return (
                             <>
                                 <a 
-                                    href={langCode === 'pt' ? getRouteFromUrl(Astro.url) || '/' : `/${langCode}${getRouteFromUrl(Astro.url) || ''}`}
+                                    href={`/${langCode}${getRouteFromUrl(Astro.url)}`}
                                     class={`flex items-center gap-1 hover:text-primary transition-colors ${isActive ? 'text-primary font-bold' : ''}`}
                                     aria-label={`Mudar para ${label}`}
                                 >
@@ -90,8 +90,8 @@ const waLink = `https://wa.me/5561995021067?text=${encodeURIComponent(waMessage)
                     {Object.entries(languages).map(([langCode]) => {
                          const isActive = lang === langCode;
                          return (
-                            <a href={langCode === 'pt' ? getRouteFromUrl(Astro.url) || '/' : `/${langCode}${getRouteFromUrl(Astro.url) || ''}`} 
-                               class={isActive ? 'text-primary font-bold' : 'text-gray-400 hover:text-primary transition'}>
+<a href={`/${langCode}${getRouteFromUrl(Astro.url)}`} 
+                                class={isActive ? 'text-primary font-bold' : 'text-gray-400 hover:text-primary transition'}>
                                {langCode.toUpperCase()}
                             </a>
                          );
