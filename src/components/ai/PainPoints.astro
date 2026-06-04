@@ -36,7 +36,7 @@ const cards = [
 ];
 ---
 
-<section class="bg-gray-50 py-20">
+<section class="bg-brand-light py-20">
     <div class="container mx-auto px-6">
         <div class="text-center max-w-3xl mx-auto mb-16">
             <h2 class="text-3xl lg:text-4xl font-playfair font-bold text-gray-900 mb-4">
@@ -45,14 +45,16 @@ const cards = [
             <p class="text-gray-600 text-lg">{t('pain.subtitle')}</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {cards.map(card => (
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition text-center">
-                    <div class={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl ${card.color}`}>
+                <div class="bg-white p-8 rounded-lg flex gap-5 items-start">
+                    <div class="flex-shrink-0 text-4xl text-brand-green mt-1">
                         <i class={`ph ${card.icon}`}></i>
                     </div>
-                    <h3 class="font-bold text-xl mb-2">{card.title}</h3>
-                    <p class="text-gray-500 text-sm">{card.desc}</p>
+                    <div>
+                        <h3 class="font-bold text-xl mb-2">{card.title}</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">{card.desc}</p>
+                    </div>
                 </div>
             ))}
         </div>

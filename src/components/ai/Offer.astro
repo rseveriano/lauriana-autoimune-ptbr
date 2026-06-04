@@ -99,9 +99,9 @@ const waLink = `https://wa.me/5561995021067?text=${encodeURIComponent(waMessage)
 </section>
 
 <!-- PRICE / ANCHORING -->
-<section id="oferta" class="py-20 bg-gray-50">
+<section id="oferta" class="py-20 bg-brand-light">
     <div class="container mx-auto px-6">
-        <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row">
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-2xl overflow-hidden flex flex-col lg:flex-row">
             <!-- Left Column (Summary) -->
             <div class="p-10 lg:w-1/2 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-gray-100">
                 <h3 class="text-2xl font-playfair font-bold text-gray-800 mb-6">{t('price.summary.title')}</h3>
@@ -120,14 +120,14 @@ const waLink = `https://wa.me/5561995021067?text=${encodeURIComponent(waMessage)
 
             <!-- Right Column (Final Price) -->
             <div class="p-10 lg:w-1/2 bg-brand-green/5 flex flex-col justify-center items-center text-center">
-                <span class="bg-brand-green/10 text-brand-green px-4 py-1 rounded-full text-xs font-bold mb-4 uppercase tracking-wider">{t('price.tag')}</span>
+                <span class="bg-brand-green/10 text-brand-green px-4 py-1 rounded-full text-xs font-bold mb-4 tracking-wider">{t('price.tag')}</span>
                 <p class="text-gray-600 text-sm mb-2">{t('price.investment_label')}</p>
                 <div class="text-5xl font-playfair font-bold text-brand-green mb-2">R$ 1.900</div>
                 <p class="text-gray-500 text-sm mb-8">{t('price.savings')} <strong>{t('price.savings.val')}</strong></p>
 
                 <a href={waLink}
                     target="_blank"
-                    class="w-full bg-brand-accent text-white py-4 rounded-lg font-bold text-lg shadow-lg hover:bg-yellow-700 transition hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center">
+                    class="w-full bg-brand-accent text-white py-4 rounded-lg font-bold text-lg shadow-lg hover:bg-[#C0563E] transition hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center">
                     {t('price.cta')} <i class="ph ph-arrow-right ml-2"></i>
                 </a>
 

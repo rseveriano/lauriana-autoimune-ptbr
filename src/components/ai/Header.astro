@@ -15,7 +15,7 @@ const navLinks = [
 ];
 ---
 
-<header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300" id="header">
+<header class="fixed w-full bg-white shadow-sm z-50 transition-all duration-300" id="header">
     <div class="container mx-auto px-6 py-4">
         <div class="flex justify-between items-center">
             <!-- Logo -->
@@ -40,7 +40,7 @@ const navLinks = [
                 </div>
 
                 <a href="#oferta"
-                    class="bg-brand-green text-white px-6 py-2 rounded-full font-bold hover:bg-green-800 transition shadow-lg transform hover:scale-105 text-sm">
+                    class="bg-brand-accent text-white px-6 py-2 rounded-lg font-bold hover:bg-[#C0563E] transition shadow-lg transform hover:scale-105 text-sm">
                     {t('nav.schedule')}
                 </a>
             </nav>
@@ -53,7 +53,7 @@ const navLinks = [
 
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu"
-            class="md:hidden absolute top-full left-6 right-6 bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 space-y-4 transform scale-95 origin-top transition-all duration-300 opacity-0 pointer-events-none data-[open=true]:opacity-100 data-[open=true]:pointer-events-auto data-[open=true]:scale-100">
+            class="md:hidden absolute top-full left-6 right-6 bg-white rounded-lg shadow-2xl border border-gray-100 p-6 space-y-4 transform scale-95 origin-top transition-all duration-300 opacity-0 pointer-events-none data-[open=true]:opacity-100 data-[open=true]:pointer-events-auto data-[open=true]:scale-100">
             <a href={`/${lang}`} class="block text-brand-green font-bold py-3 border-b border-gray-50 flex items-center">
                 <i class="ph ph-house mr-2 text-xl"></i> {t('nav.home')}
             </a>
@@ -71,7 +71,7 @@ const navLinks = [
             </div>
 
             <a href="#oferta"
-                class="block w-full text-center bg-brand-green text-white px-6 py-4 rounded-xl font-bold hover:bg-green-800 transition shadow-lg">
+                class="block w-full text-center bg-brand-accent text-white px-6 py-4 rounded-lg font-bold hover:bg-[#C0563E] transition shadow-lg">
                 {t('nav.schedule')}
             </a>
         </div>

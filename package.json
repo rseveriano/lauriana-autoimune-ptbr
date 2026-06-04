@@ -12,6 +12,8 @@
     },
     "dependencies": {
         "@fontsource/inter": "^5.2.8",
+        "@fontsource/merriweather": "^5.2.11",
+        "@fontsource/merriweather-sans": "^5.2.7",
         "@fontsource/outfit": "^5.2.8",
         "astro": "^6.4.4",
         "autoprefixer": "^10.4.21",

@@ -36,7 +36,7 @@ No test suite, linter, or formatter is configured.
 
 ## Styling & Assets
 - Tailwind custom theme is in `tailwind.config.mjs`: brand palette (`brand.light`, `brand.green`, `brand.accent`, etc.), custom fonts (`font-sans: Inter`, `font-heading: Outfit`, `font-lato: Lato`, `font-playfair: Playfair Display`), `rounded-4xl`, and `fade-in-up` animation.
-- **Main site** loads Inter/Outfit via `@fontsource/inter` and `@fontsource/outfit` (npm dependencies).
+- **Main site** loads Merriweather (display) and Merriweather Sans (body) via `@fontsource/merriweather` and `@fontsource/merriweather-sans` (npm dependencies).
 - **AI landing** loads Lato and Playfair Display via Google Fonts CDN inside `AILayout.astro`.
 - Phosphor Icons are loaded from unpkg CDN in both layouts.
 - OG image: `/ogimage.png`.

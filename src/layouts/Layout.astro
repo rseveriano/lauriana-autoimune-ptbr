@@ -1,6 +1,8 @@
 ---
-import '@fontsource/inter';
-import '@fontsource/outfit';
+import '@fontsource/merriweather/400.css';
+import '@fontsource/merriweather/700.css';
+import '@fontsource/merriweather-sans/400.css';
+import '@fontsource/merriweather-sans/700.css';
 import '../styles/global.css';
 import { ClientRouter } from 'astro:transitions';
 import { useTranslations } from '../i18n/utils';
@@ -59,12 +61,12 @@ const esURL = new URL(getVersion('es'), Astro.site);
 		<slot />
 	</body>
 </html>
-<style is:global>
-	html {
-		font-family: 'Inter', system-ui, sans-serif;
-		background: #F2EBE3;
-	}
+	<style is:global>
+		html {
+			font-family: 'Merriweather Sans', system-ui, sans-serif;
+			background: #F2EBE3;
+		}
     h1, h2, h3, h4, h5, h6 {
-        font-family: 'Outfit', sans-serif;
+        font-family: 'Merriweather', serif;
     }
-</style>
+	</style>

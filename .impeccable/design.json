@@ -1,0 +1,344 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-04T03:05:00.000Z",
+  "title": "Design System: Lauriana Nutrição",
+  "extensions": {
+    "colorMeta": {
+      "deep-sage": {
+        "role": "primary",
+        "displayName": "Deep Sage",
+        "canonical": "oklch(0.55 0.08 145)",
+        "tonalRamp": [
+          "oklch(0.20 0.04 145)",
+          "oklch(0.30 0.05 145)",
+          "oklch(0.40 0.07 145)",
+          "oklch(0.50 0.08 145)",
+          "oklch(0.55 0.08 145)",
+          "oklch(0.70 0.06 145)",
+          "oklch(0.85 0.04 145)",
+          "oklch(0.95 0.02 145)"
+        ]
+      },
+      "warm-sand": {
+        "role": "neutral",
+        "displayName": "Warm Sand",
+        "canonical": "oklch(0.94 0.015 75)",
+        "tonalRamp": [
+          "oklch(0.20 0.03 75)",
+          "oklch(0.40 0.05 75)",
+          "oklch(0.55 0.07 75)",
+          "oklch(0.70 0.08 75)",
+          "oklch(0.80 0.09 75)",
+          "oklch(0.88 0.07 75)",
+          "oklch(0.93 0.05 75)",
+          "oklch(0.97 0.03 75)"
+        ]
+      },
+      "fired-clay": {
+        "role": "accent",
+        "displayName": "Fired Clay",
+        "canonical": "oklch(0.65 0.13 45)",
+        "tonalRamp": [
+          "oklch(0.25 0.05 45)",
+          "oklch(0.40 0.08 45)",
+          "oklch(0.55 0.12 45)",
+          "oklch(0.65 0.13 45)",
+          "oklch(0.75 0.11 45)",
+          "oklch(0.85 0.08 45)",
+          "oklch(0.90 0.05 45)",
+          "oklch(0.95 0.03 45)"
+        ]
+      },
+      "deep-grove": {
+        "role": "neutral",
+        "displayName": "Deep Grove",
+        "canonical": "oklch(0.25 0.05 145)",
+        "tonalRamp": [
+          "oklch(0.10 0.02 145)",
+          "oklch(0.15 0.03 145)",
+          "oklch(0.20 0.04 145)",
+          "oklch(0.25 0.05 145)",
+          "oklch(0.35 0.06 145)",
+          "oklch(0.45 0.07 145)",
+          "oklch(0.60 0.05 145)",
+          "oklch(0.80 0.03 145)"
+        ]
+      },
+      "verdant": {
+        "role": "primary",
+        "displayName": "Verdant",
+        "canonical": "oklch(0.52 0.10 165)",
+        "tonalRamp": [
+          "oklch(0.15 0.04 165)",
+          "oklch(0.25 0.06 165)",
+          "oklch(0.35 0.08 165)",
+          "oklch(0.45 0.10 165)",
+          "oklch(0.52 0.10 165)",
+          "oklch(0.65 0.08 165)",
+          "oklch(0.80 0.06 165)",
+          "oklch(0.95 0.03 165)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(0.20 0.02 260)",
+        "tonalRamp": [
+          "oklch(0.05 0 0)",
+          "oklch(0.10 0 0)",
+          "oklch(0.15 0.01 260)",
+          "oklch(0.20 0.02 260)",
+          "oklch(0.30 0.02 260)",
+          "oklch(0.45 0.02 260)",
+          "oklch(0.60 0.01 260)",
+          "oklch(0.80 0.01 260)"
+        ]
+      },
+      "harvest-gold": {
+        "role": "tertiary",
+        "displayName": "Harvest Gold",
+        "canonical": "oklch(0.68 0.11 75)",
+        "tonalRamp": [
+          "oklch(0.25 0.05 75)",
+          "oklch(0.40 0.08 75)",
+          "oklch(0.55 0.10 75)",
+          "oklch(0.68 0.11 75)",
+          "oklch(0.78 0.09 75)",
+          "oklch(0.88 0.06 75)",
+          "oklch(0.95 0.03 75)",
+          "oklch(0.98 0.01 75)"
+        ]
+      },
+      "coral-clay": {
+        "role": "accent",
+        "displayName": "Coral Clay",
+        "canonical": "oklch(0.66 0.14 40)",
+        "tonalRamp": [
+          "oklch(0.25 0.06 40)",
+          "oklch(0.40 0.10 40)",
+          "oklch(0.55 0.13 40)",
+          "oklch(0.66 0.14 40)",
+          "oklch(0.78 0.11 40)",
+          "oklch(0.88 0.08 40)",
+          "oklch(0.95 0.04 40)",
+          "oklch(0.98 0.02 40)"
+        ]
+      },
+      "pale-leaf": {
+        "role": "tertiary",
+        "displayName": "Pale Leaf",
+        "canonical": "oklch(0.90 0.10 160)",
+        "tonalRamp": [
+          "oklch(0.30 0.05 160)",
+          "oklch(0.45 0.08 160)",
+          "oklch(0.60 0.10 160)",
+          "oklch(0.75 0.10 160)",
+          "oklch(0.85 0.09 160)",
+          "oklch(0.90 0.10 160)",
+          "oklch(0.95 0.06 160)",
+          "oklch(0.98 0.03 160)"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "canonical": "oklch(0.98 0.005 145)",
+        "tonalRamp": [
+          "oklch(0.70 0.02 145)",
+          "oklch(0.80 0.01 145)",
+          "oklch(0.88 0.008 145)",
+          "oklch(0.93 0.005 145)",
+          "oklch(0.96 0.005 145)",
+          "oklch(0.98 0.005 145)",
+          "oklch(0.99 0.003 145)",
+          "oklch(1.00 0 0)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headlines. Outfit on main site; Playfair Display on AI landing. Different scales: 4rem max main site, 5rem max AI landing."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles. Outfit on main site; Playfair Display on AI landing."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card titles, feature names, FAQ questions. Inter on main site; Lato on AI landing."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Prose, descriptions, testimonials. Inter 400 1rem on main site; Lato 400 1.125rem on AI landing. Capped at 65–75ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Navigation, tags, metadata, button labels. Inter 500 on main site; Lato 700 on AI landing."
+      }
+    },
+    "shadows": [
+      {
+        "name": "ambient-low",
+        "value": "0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1)",
+        "purpose": "Default card shadow. Barely perceptible separation."
+      },
+      {
+        "name": "ambient-medium",
+        "value": "0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)",
+        "purpose": "Elevated cards and image containers at rest."
+      },
+      {
+        "name": "ambient-high",
+        "value": "0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1)",
+        "purpose": "Hover state for cards. Intensifies on interaction."
+      },
+      {
+        "name": "hero-glow",
+        "value": "0 25px 50px -12px rgba(0,0,0,0.15)",
+        "purpose": "Video containers and featured images. Soft pool of darkness."
+      },
+      {
+        "name": "cta-glow",
+        "value": "0 10px 15px -3px rgba(224,122,95,0.3)",
+        "purpose": "AI landing campaign CTA buttons. Warm glow on Coral Clay."
+      }
+    ],
+    "motion": [
+      {
+        "name": "fade-in-up",
+        "value": "fadeInUp 0.8s ease-out forwards",
+        "purpose": "Default entrance for hero text and sections. translateY(20px) → 0 + opacity."
+      },
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Default easing for state transitions (hover, focus)."
+      },
+      {
+        "name": "ease-bounce-out",
+        "value": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+        "purpose": "Reserved for playful micro-interactions only. Never for page entrances."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA. Deep Sage pill with white text. Used on the main site for scheduling and contact.",
+      "html": "<button class=\"ds-btn-primary\">Agendar Consulta</button>",
+      "css": ".ds-btn-primary { background: #5D7556; color: #ffffff; padding: 16px 32px; border-radius: 9999px; font-family: 'Inter', system-ui, sans-serif; font-weight: 700; font-size: 1rem; border: none; cursor: pointer; transition: background 0.2s cubic-bezier(0.4,0,0.2,1), transform 0.2s cubic-bezier(0.4,0,0.2,1); display: inline-flex; align-items: center; gap: 8px; } .ds-btn-primary:hover { background: #3B755F; transform: translateY(-2px); } .ds-btn-primary:focus-visible { outline: 2px solid #D97757; outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Secondary action. Mist pill with Ink text and subtle sage border. Used for email and alternate CTAs.",
+      "html": "<button class=\"ds-btn-secondary\">Enviar E-mail</button>",
+      "css": ".ds-btn-secondary { background: #F8FAF9; color: #1F2937; padding: 16px 32px; border-radius: 9999px; font-family: 'Inter', system-ui, sans-serif; font-weight: 700; font-size: 1rem; border: 2px solid rgba(93,117,86,0.2); cursor: pointer; transition: background 0.2s cubic-bezier(0.4,0,0.2,1), border-color 0.2s cubic-bezier(0.4,0,0.2,1); display: inline-flex; align-items: center; gap: 8px; } .ds-btn-secondary:hover { background: rgba(93,117,86,0.05); border-color: rgba(93,117,86,0.4); } .ds-btn-secondary:focus-visible { outline: 2px solid #D97757; outline-offset: 2px; }"
+    },
+    {
+      "name": "Service Card",
+      "kind": "card",
+      "refersTo": "card-default",
+      "description": "Main site's specialty card. White background, rounded-4xl, icon + heading + body. Hover lifts and inverts icon colors.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-card-icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z\"/><path d=\"M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z\"/></svg></div><h3 class=\"ds-card-title\">TEA</h3><p class=\"ds-card-body\">Abordagem nutricional focada na modulação intestinal.</p></article>",
+      "css": ".ds-card { background: #ffffff; border-radius: 2rem; padding: 32px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1); transition: box-shadow 0.3s cubic-bezier(0.4,0,0.2,1), transform 0.3s cubic-bezier(0.4,0,0.2,1); } .ds-card:hover { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1); transform: translateY(-8px); } .ds-card-icon { width: 64px; height: 64px; background: #F2EBE3; border-radius: 1rem; display: flex; align-items: center; justify-content: center; color: #5D7556; margin-bottom: 24px; transition: background 0.2s cubic-bezier(0.4,0,0.2,1), color 0.2s cubic-bezier(0.4,0,0.2,1); } .ds-card:hover .ds-card-icon { background: #5D7556; color: #ffffff; } .ds-card-title { font-family: 'Outfit', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; color: #2C3E2E; margin-bottom: 16px; } .ds-card-body { font-family: 'Inter', system-ui, sans-serif; font-size: 1rem; line-height: 1.65; color: rgba(44,62,46,0.7); }"
+    },
+    {
+      "name": "AI Campaign CTA",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "High-conversion CTA for the AI landing. Coral Clay, sharp radius, warm glow shadow. Urgency without alarm.",
+      "html": "<button class=\"ds-btn-ai-primary\">QUERO RECUPERAR MINHA SAÚDE</button>",
+      "css": ".ds-btn-ai-primary { background: #E07A5F; color: #ffffff; padding: 16px 32px; border-radius: 0.5rem; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 1.125rem; border: none; cursor: pointer; transition: background 0.2s cubic-bezier(0.4,0,0.2,1), box-shadow 0.2s cubic-bezier(0.4,0,0.2,1), transform 0.2s cubic-bezier(0.4,0,0.2,1); box-shadow: 0 10px 15px -3px rgba(224,122,95,0.3); display: inline-flex; align-items: center; gap: 8px; } .ds-btn-ai-primary:hover { background: #c55a40; transform: translateY(-2px); box-shadow: 0 20px 25px -5px rgba(224,122,95,0.25); } .ds-btn-ai-primary:focus-visible { outline: 2px solid #C5A065; outline-offset: 2px; }"
+    },
+    {
+      "name": "AI Offer Card (Glass)",
+      "kind": "card",
+      "refersTo": "card-default",
+      "description": "AI landing offer section card. White/10 backdrop blur over Verdant background. Used for diagnostic and monitoring items.",
+      "html": "<div class=\"ds-offer-card\"><h3 class=\"ds-offer-title\">Suporte Direct Line</h3><p class=\"ds-offer-body\">Acesso direto por 120 dias.</p></div>",
+      "css": ".ds-offer-card { background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.2); border-radius: 0.5rem; padding: 24px; color: #ffffff; transition: background 0.2s cubic-bezier(0.4,0,0.2,1); } .ds-offer-card:hover { background: rgba(255,255,255,0.2); } .ds-offer-title { font-family: 'Lato', sans-serif; font-weight: 700; font-size: 1.25rem; margin-bottom: 8px; } .ds-offer-body { font-family: 'Lato', sans-serif; font-size: 0.875rem; opacity: 0.8; line-height: 1.5; }"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "refersTo": "button-ghost",
+      "description": "Sticky nav link. Pill-shaped hover background, no uppercase. Inter on main site, Lato on AI landing.",
+      "html": "<a href=\"#\" class=\"ds-nav-link\">Serviços</a>",
+      "css": ".ds-nav-link { font-family: 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 0.9375rem; color: #2C3E2E; text-decoration: none; padding: 8px 16px; border-radius: 9999px; transition: color 0.2s cubic-bezier(0.4,0,0.2,1), background 0.2s cubic-bezier(0.4,0,0.2,1); display: inline-block; } .ds-nav-link:hover { color: #5D7556; background: rgba(93,117,86,0.08); } .ds-nav-link:focus-visible { outline: 2px solid #D97757; outline-offset: 2px; }"
+    },
+    {
+      "name": "AI Bonus Card",
+      "kind": "card",
+      "refersTo": "card-default",
+      "description": "AI landing bonus/offer card. White background with Coral Clay border and a Harvest Gold badge pill.",
+      "html": "<div class=\"ds-bonus-card\"><span class=\"ds-bonus-badge\">Bônus Exclusivo</span><h3 class=\"ds-bonus-title\">Terapias Integrativas</h3><p class=\"ds-bonus-body\">Geoterapia, Aromaterapia, Florais e Reflexologia.</p></div>",
+      "css": ".ds-bonus-card { background: #ffffff; border: 2px solid #E07A5F; border-radius: 0.5rem; padding: 24px; position: relative; color: #1F2937; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); } .ds-bonus-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #C5A065; color: #ffffff; padding: 4px 16px; border-radius: 9999px; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; } .ds-bonus-title { font-family: 'Lato', sans-serif; font-weight: 700; font-size: 1.25rem; margin-bottom: 8px; } .ds-bonus-body { font-family: 'Lato', sans-serif; font-size: 0.875rem; color: rgba(31,41,55,0.7); line-height: 1.5; }"
+    },
+    {
+      "name": "AI Quote Badge",
+      "kind": "custom",
+      "refersTo": "card-default",
+      "description": "Floating quote badge overlaid on the AI hero image. White card with Playfair text and gold stars.",
+      "html": "<div class=\"ds-quote-badge\"><p>\"O diagnóstico não é uma sentença.\"</p><div class=\"ds-stars\">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>",
+      "css": ".ds-quote-badge { background: #ffffff; padding: 16px; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); max-width: 280px; } .ds-quote-badge p { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 1rem; color: #1F2937; margin-bottom: 8px; line-height: 1.4; } .ds-stars { color: #C5A065; font-size: 1rem; letter-spacing: 2px; }"
+    }
+  ],
+    "narrative": {
+    "northStar": "The Living Terrain",
+    "overview": "The Lauriana visual system grows out of a single metaphor: the body as a garden. This repo builds two independent brand surfaces that share a palette but speak at different volumes. The Main Site (portfolio, routes / /pt /en /es) is Restrained: Warm Sand ground, Deep Sage punctuation, Outfit + Inter type. Its job is long-term credibility for families of neurodivergent children. The AI Landing (campaign, routes /ai) is Committed: Mist ground, Verdant carrying 30-60% of surface, Playfair Display + Lato type. Its job is conversion for a 120-day autoimmune treatment. They do not share components, layouts, or typographic pairings.",
+    "keyCharacteristics": [
+      "Two independent surfaces: Main Site (portfolio, restrained) and AI Landing (campaign, committed). They do not share components or type pairings.",
+      "Organic, not geometric: rounded-full buttons and 2rem card corners on the main site; 8px campaign CTAs and offer cards on the AI landing.",
+      "Two type voices: Outfit + Inter (main site) and Playfair Display + Lato (AI landing). Never mix the pairs.",
+      "Shadows are ambient, not structural. They create depth of field, not hierarchy.",
+      "Color commitment is split by surface: Restrained (sage + sand) on the main site; Committed (verdant + coral) on the AI landing."
+    ],
+    "rules": [
+      { "name": "The One Voice Rule (Main Site)", "body": "The primary accent (Deep Sage) is used on ≤10% of any given screen. Its rarity is the point.", "section": "colors" },
+      { "name": "The Campaign Volume Rule (AI Landing)", "body": "Verdant and Coral Clay are permitted to carry large surfaces because the page's job is conversion. But they must alternate with Mist and white breathing room. A wall of uninterrupted green reads as aggressive, not healing.", "section": "colors" },
+      { "name": "The Warm Sand Doctrine", "body": "Warm Sand is the main site's body background because the terrain metaphor demands it. The AI landing uses Mist. If a new surface cannot articulate why its ground should be sand-colored, use Mist or pure white instead.", "section": "colors" },
+      { "name": "The Surface Separation Rule", "body": "Never place Warm Sand and Mist on the same page. Each surface has its own ground. Cross-pollinating them breaks the architectural boundary between portfolio and campaign.", "section": "colors" },
+      { "name": "The No Shouting Rule", "body": "Hero heading max is 5rem on the AI landing, 4rem on the main site. Above that, the page is shouting, not designing. Display text uses -0.02em letter-spacing floor; anything tighter and letters touch.", "section": "typography" },
+      { "name": "The Two-Font Max Rule", "body": "Each surface uses at most two font families: one display, one body. The AI landing's Playfair + Lato pair is distinct from the main site's Outfit + Inter pair. Do not mix them on the same surface. Do not use Playfair on the main site or Outfit on the AI landing.", "section": "typography" },
+      { "name": "The Italic Emphasis Rule (AI Landing only)", "body": "Playfair italic is reserved for the hero headline's emphasized phrase. It is not used for body emphasis, nav items, or labels. One italic moment per page is voice; scattered italics are decoration.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Surfaces are flat at rest. Shadows appear only as a response to state (hover, elevation, focus) or to anchor large media elements. Do not shadow every container.", "section": "elevation" },
+      { "name": "The No Glass Rule", "body": "Backdrop-filter blur is used only on the AI landing's offer section as a deliberate brand moment ('the mist over the terrain'). It is not a default card treatment.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Deep Sage as a punctuation color on ≤10% of any screen on the main site.",
+      "Do use Verdant as a dominant surface color on the AI landing, but alternate it with Mist and white breathing room.",
+      "Do maintain 65–75ch line lengths for all body prose on both surfaces.",
+      "Do use Outfit + Inter on the main site and Playfair Display + Lato on the AI landing. Never mix the pairs.",
+      "Do reserve uppercase for short CTAs (≤4 words) and badges only.",
+      "Do use text-wrap: balance on h1–h3 for even line breaks.",
+      "Do respect prefers-reduced-motion: replace fade-in-up with instant visibility.",
+      "Do use Phosphor Icons (outlined style) for all interface icons. Inline as SVG where possible.",
+      "Do use pill-shaped buttons (9999px radius) on the main site and 8px-radius buttons on the AI landing. The shape signals the surface's emotional register."
+    ],
+    "donts": [
+      "Don't place main site components on the AI landing, or vice versa. The Service Card's 2rem radius and Deep Sage hover belong to the portfolio; the AI Offer Card's 8px radius and Coral Clay border belong to the campaign.",
+      "Don't use Warm Sand on the AI landing or Mist on the main site. Each surface has its own ground.",
+      "Don't use side-stripe borders (border-left > 1px as a colored accent on cards or callouts). The AI landing's hero quote currently uses this; it is a known deviation to be removed.",
+      "Don't use gradient text (background-clip: text with gradients).",
+      "Don't use glassmorphism as a default card treatment. It is permitted only in the AI offer section as a deliberate brand moment.",
+      "Don't use the hero-metric template (big number + small label + gradient accent).",
+      "Don't repeat identical icon + heading + text card grids without variation in size, imagery, or layout rhythm.",
+      "Don't place tiny uppercase tracked eyebrows above every section heading. One deliberate kicker per page is voice; on every section it is AI grammar.",
+      "Don't use numbered section markers (01 / 02 / 03) as default scaffolding. Numbers earn their place only when the section is a real sequence.",
+      "Don't use Warm Sand as a body background for new surfaces without the terrain metaphor justification. When in doubt, use Mist or white.",
+      "Don't let text overflow its container at any breakpoint. Test headings with the longest word in every language (pt/en/es).",
+      "Don't use marketing buzzwords: streamline, empower, supercharge, leverage, unleash, transform, seamless, world-class, enterprise-grade, next-generation, cutting-edge, game-changer, mission-critical."
+    ]
+  }
+}

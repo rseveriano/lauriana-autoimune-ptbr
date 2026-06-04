@@ -22,7 +22,7 @@ const waLink = `https://wa.me/5561995021067?text=${encodeURIComponent(waMessage)
         <div class="w-full lg:w-5/12 order-2 lg:order-1 flex justify-center">
             <div class="relative group">
                 <img src="/ai/ebook.png" alt="E-book Mockup"
-                    class="w-full max-w-sm rounded-2xl shadow-2xl transform lg:-rotate-3 group-hover:rotate-0 transition-transform duration-500 border-4 border-white/10"
+                    class="w-full max-w-sm rounded-lg shadow-2xl transform lg:-rotate-3 group-hover:rotate-0 transition-transform duration-500 border-4 border-white/10"
                     loading="lazy" width="400" height="600">
                 <!-- Decorative glow -->
                 <div class="absolute inset-0 bg-brand-gold/10 blur-3xl rounded-full -z-10 scale-90 opacity-50">
@@ -32,7 +32,7 @@ const waLink = `https://wa.me/5561995021067?text=${encodeURIComponent(waMessage)
 
         <!-- Content (Text Column) -->
         <div class="w-full lg:w-7/12 text-white order-1 lg:order-2">
-            <span class="inline-block bg-brand-gold text-brand-dark px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+            <span class="inline-block bg-brand-gold text-brand-dark px-4 py-1 rounded-full text-xs font-bold tracking-wider mb-6">
                 {t('lead.tag')}
             </span>
             <h2 class="text-3xl lg:text-5xl font-playfair font-bold mb-6">
@@ -72,14 +72,14 @@ const waLink = `https://wa.me/5561995021067?text=${encodeURIComponent(waMessage)
                 </li>
             </ul>
 
-            <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 flex flex-col sm:flex-row items-center gap-6">
+            <div class="bg-white/10 p-6 rounded-lg border border-white/20 flex flex-col sm:flex-row items-center gap-6">
                 <div class="flex-1 text-center sm:text-left">
                     <p class="text-sm text-green-100 mb-1 opacity-80">{t('lead.cta_label')}</p>
                     <p class="font-bold text-white">{t('lead.cta_sub')}</p>
                 </div>
                 <a href={waLink}
                     target="_blank"
-                    class="w-full sm:w-auto bg-brand-accent text-white font-bold px-8 py-4 rounded-xl flex items-center justify-center gap-3 hover:bg-yellow-700 transition shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                    class="w-full sm:w-auto bg-brand-accent text-white font-bold px-8 py-4 rounded-lg flex items-center justify-center gap-3 hover:bg-[#C0563E] transition shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
                     <i class="ph ph-whatsapp-logo text-2xl"></i>
                     {t('lead.cta_btn')}
                 </a>

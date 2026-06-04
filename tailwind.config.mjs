@@ -18,8 +18,8 @@ export default {
                 }
             },
             fontFamily: {
-                sans: ['Inter', 'sans-serif'],
-                heading: ['Outfit', 'sans-serif'],
+                sans: ['Merriweather Sans', 'sans-serif'],
+                heading: ['Merriweather', 'serif'],
                 lato: ['Lato', 'sans-serif'],
                 playfair: ['Playfair Display', 'serif'],
             },
